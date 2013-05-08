@@ -1,0 +1,12 @@
+/_tmp/
+.htaccess
+.directory
+.svn*
+nbproject
+._*
+.~lock.*
+.buildpath
+.DS_Store
+.project
+.settings
+/_tools/*.jar
