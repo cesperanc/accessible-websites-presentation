@@ -1,3 +1,429 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*
+    Now let's bring some text styles back ...
+*/
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+    
+small{
+    font-size: smaller;
+    color: #666;
+}
+
+/*
+    Now let's style the presentation steps.
+
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
+
+.step {
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+    
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.slide {
+    display: block;
+
+    width: 900px;
+    padding: 40px 60px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0 70px;
+
+    color: #231F20;
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+/* slides */
+
+.slide .slide-number{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.8em;
+}
+
+.no-number .slide-number{
+    display: none;
+}
+
+.slide .title{
+    overflow: hidden;
+    height: 59px;
+    border-radius: 0 20px 20px 0;
+    margin: 0 0 40px -20px;
+}
+
+.slide .title .label{
+    background-color: #CCFF00;
+    border: 1px solid #CCFF00;
+    min-width: 240px;
+    height: 47px;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    float: left;
+    padding: 7px 60px 3px 20px;
+    border-radius: 20px 0 0 20px;
+}
+
+.slide .title .corner{
+    float: left;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 31px solid transparent;
+    border-left: 30px solid #CCFF00;
+    border-bottom: 28px solid #CCFF00;
+    border-right: 28px solid transparent;
+}
+
+.slide h1,
+.slide h2,
+.slide h3,
+.slide h4,
+.slide h5,
+.slide h6{
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.slide p,
+.slide ul,
+.slide ol{
+    line-height: 1.5em;
+}
+
+.slide p,
+.slide ul,
+.slide ol,
+.slide li{
+    margin-bottom: 0.5em;
+}
+
+.slide li:first-child{
+    margin-top: 0.5em;
+}
+
+.slide ul,
+.slide ol{
+    padding-left: 40px;
+}
+
+.slide ol {
+    list-style: decimal;
+}
+
+.slide ul {
+    list-style: disc;
+}
+
+blockquote dt{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+blockquote dl,
+blockquote dt,
+blockquote dd{
+    display: inline;
+}
+blockquote {
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0px .75em 1.5em;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+}
+li blockquote {
+    margin-left: 0;
+}
+blockquote p {
+    margin: 0;
+}
+blockquote p+p {
+    margin-top: 1.5em;
+}
+blockquote footer {
+    margin-bottom: 0;
+}
+blockquote blockquote, .callout blockquote, blockquote ol, blockquote ul {
+    margin-left: 1.5em;
+    margin-right: .75em;
+}
+blockquote>blockquote {
+    margin-top: .75em
+}
+.note-block blockquote {
+    font-style: normal;
+}
+blockquote mark {
+    font-weight: bold;
+}
+blockquote strong mark, blockquote mark strong {
+    font-style: italic;
+}
+/* Quotes for two levels of nested quotations */
+q {
+    quotes: '“' '”' '‘' '’';
+}
+/* extra content definitions for pre-2011 WebKit */
+q:before {
+    content: '“';
+    content: open-quote;
+}
+q:after {
+    content: '”';
+    content: close-quote;
+}
+q q:before {
+    content: '‘';
+    content: open-quote;
+}
+q q:after {
+    content: '’';
+    content: close-quote;
+}
+/* q in blockquote */
+blockquote q:before {
+    content: '‘';
+    content: open-quote;
+}
+blockquote q:after {
+    content: '’';
+    content: close-quote;
+}
+blockquote q q:before {
+    content: '“';
+    content: open-quote;
+}
+blockquote q q:after {
+    content: '”';
+    content: close-quote;
+}
+/* hanging opening quote */
+blockquote:before {
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+
+blockquote footer,
+.footer{
+    font-size: 0.9em;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+pre.prettyprint.code{
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #eee;
+    font-size: 26px;
+    line-height: 1.4em;
+    margin: 10px 0 20px;
+    word-wrap: break-word;
+}
+
+.example-label{
+    font-weight: bold;
+}
+
+.footnote-reference{
+    vertical-align: super;
+    font-size: small;
+}
+
+.footnote,
+.footnote sup{
+    font-size: 22px;
+}
+
+.footnote sup{
+    padding-right: 5px;
+}
+
+code,
+kbd{
+    font-family: monospace;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.rotate-title{
+    margin-top: 150px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1;
+
+    /*text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #231F20, 0 0 40px #231F20, 0 0 70px #231F20, 0 0 80px #231F20, 0 0 100px #231F20, 0 0 150px #231F20;*/
+    text-shadow: 0 0 5px #231F20;
+}
+
+.rotate-title .more{
+    display: inline-block;
+}
+
+#title{
+    min-height: 700px;
+}
+
+#title .authors{
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    width: 780px;
+}
+
+#title .authors .name{
+    font-weight: bold;
+}
+
+#title.slide{
+    background-color: transparent;
+    border: 0px none;
+    box-shadow: 0 0 0 transparent;
+    position: relative;
+}
+
+#global{
+    background-color: transparent;
+    box-shadow: 0 0 0 transparent;
+}
+
+.lang-css, .lang-html, .lang-js{}
+
+
+
+/* tables */
+#tablesexample table{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+#tablesexample table thead th:first-child{
+    background: #b9c9fe;
+    border-radius: 10px 0 0;
+}
+#tablesexample table thead th:last-child{
+    background: #b9c9fe;
+    border-radius: 0 10px 0 0;
+}
+#tablesexample caption{
+    caption-side: bottom;
+    background-color: #e8edff;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+#tablesexample table th{
+    padding: 8px;
+    font-weight: normal;
+    font-size: 24px;
+    color: #039;
+    background: #b9c9fe;
+    text-align: center;
+}
+#tablesexample table td{
+    padding: 8px;
+    background: #e8edff;
+    border-top: 1px solid #fff;
+    color: #669;
+    text-align: center;
+}
+#tablesexample table tbody tr:hover td{
+    background: #d0dafd;
+}
+
+#tablesexample td[scope],
+#tablesexample th[scope]{
+    font-weight:bold;
+}
+
+
+
+#tablesexamplecode .code{
+    font-size: 16px;
+}
+
 @media screen{/*
     So you like the style of impress.js demo?
     Or maybe you are just curious how it was done?
@@ -19,61 +445,6 @@
     Shall we begin?
     */
 
-
-    /*
-        We start with a good ol' reset.
-        That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
-    
-        You can probably argue if it is needed here, or not, but for sure it
-        doesn't do any harm and gives us a fresh start.
-    */
-
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-        display: block;
-    }
-    body {
-        line-height: 1;
-    }
-    ol, ul {
-        list-style: none;
-    }
-    blockquote, q {
-        quotes: none;
-    }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-
     /*
         Now here is when interesting things start to appear.
     
@@ -82,7 +453,6 @@
         want to leave anybody behind.
     */
     body {
-        font-family: 'PT Sans', sans-serif;
         min-height: 740px;
 
         background: rgb(215, 215, 215);
@@ -93,12 +463,6 @@
         background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
         background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     }
-
-    /*
-        Now let's bring some text styles back ...
-    */
-    b, strong { font-weight: bold }
-    i, em { font-style: italic }
 
     /*
         ... and give links a nice look.
@@ -122,11 +486,6 @@
     a:focus {
         background: rgba(255,255,255,1);
         text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
-    }
-    
-    small{
-        font-size: smaller;
-        color: #666;
     }
 
     /*
@@ -179,10 +538,6 @@
         -ms-box-sizing:     border-box;
         -o-box-sizing:      border-box;
         box-sizing:         border-box;
-
-        font-family: 'PT Serif', georgia, serif;
-        font-size: 48px;
-        line-height: 1.5;
     }
 
     /*
@@ -218,38 +573,10 @@
         They cover everything what you see on first three steps of the demo.
     */
     .slide {
-        display: block;
-
-        width: 900px;
         height: 700px;
-        padding: 40px 60px;
-
-        background-color: white;
-        border: 1px solid rgba(0, 0, 0, .3);
-        border-radius: 0 70px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-
-        color: #231F20;
-        text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 30px;
-        line-height: 36px;
-        letter-spacing: -1px;
-
         overflow: hidden;
-    }
-
-    .slide q {
-        display: block;
-        font-size: 50px;
-        line-height: 72px;
-
-        margin-top: 100px;
-    }
-
-    .slide q strong {
-        white-space: nowrap;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     }
 
     /*
@@ -265,223 +592,6 @@
 
 
 
-    /* slides */
-
-    .slide .slide-number{
-        display: block;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
-        font-size: 0.8em;
-    }
-
-    .no-number .slide-number{
-        display: none;
-    }
-
-    .slide .title{
-        overflow: hidden;
-        height: 59px;
-        border-radius: 0 20px 20px 0;
-        margin: 0 0 40px -20px;
-    }
-
-    .slide .title .label{
-        background-color: #CCFF00;
-        min-width: 240px;
-        height: 49px;
-        font-size: 1.2em;
-        line-height: 1.3em;
-        float: left;
-        padding: 7px 60px 3px 20px;
-        border-radius: 20px 0 0 20px;
-    }
-
-    .slide .title .corner{
-        float: left;
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-top: 31px solid transparent;
-        border-left: 30px solid #CCFF00;
-        border-bottom: 28px solid #CCFF00;
-        border-right: 28px solid transparent;
-    }
-
-    .slide h1,
-    .slide h2,
-    .slide h3,
-    .slide h4,
-    .slide h5,
-    .slide h6{
-        font-weight: bold;
-        margin-top: 1em;
-    }
-
-    .slide p,
-    .slide ul,
-    .slide ol{
-        line-height: 1.5em;
-    }
-
-    .slide p,
-    .slide ul,
-    .slide ol,
-    .slide li{
-        margin-bottom: 0.5em;
-    }
-
-    .slide li:first-child{
-        margin-top: 0.5em;
-    }
-
-    .slide ul,
-    .slide ol{
-        padding-left: 40px;
-    }
-
-    .slide ol {
-        list-style: decimal;
-    }
-
-    .slide ul {
-        list-style: disc;
-    }
-
-    blockquote dt{
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
-
-    blockquote dl,
-    blockquote dt,
-    blockquote dd{
-        display: inline;
-    }
-    blockquote {
-        border-left: 0.5em solid #DDD;
-        margin: 1.5em 0px .75em 1.5em;
-        box-shadow: 0 0 6px rgba(0,0,0,0.5);
-        padding: .75em .5em .75em 1em;
-        background: #fff;
-    }
-    li blockquote {
-        margin-left: 0;
-    }
-    blockquote p {
-        margin: 0;
-    }
-    blockquote p+p {
-        margin-top: 1.5em;
-    }
-    blockquote footer {
-        margin-bottom: 0;
-    }
-    blockquote blockquote, .callout blockquote, blockquote ol, blockquote ul {
-        margin-left: 1.5em;
-        margin-right: .75em;
-    }
-    blockquote>blockquote {
-        margin-top: .75em
-    }
-    .note-block blockquote {
-        font-style: normal;
-    }
-    blockquote mark {
-        font-weight: bold;
-    }
-    blockquote strong mark, blockquote mark strong {
-        font-style: italic;
-    }
-    /* Quotes for two levels of nested quotations */
-    q {
-        quotes: '“' '”' '‘' '’';
-    }
-    /* extra content definitions for pre-2011 WebKit */
-    q:before {
-        content: '“';
-        content: open-quote;
-    }
-    q:after {
-        content: '”';
-        content: close-quote;
-    }
-    q q:before {
-        content: '‘';
-        content: open-quote;
-    }
-    q q:after {
-        content: '’';
-        content: close-quote;
-    }
-    /* q in blockquote */
-    blockquote q:before {
-        content: '‘';
-        content: open-quote;
-    }
-    blockquote q:after {
-        content: '’';
-        content: close-quote;
-    }
-    blockquote q q:before {
-        content: '“';
-        content: open-quote;
-    }
-    blockquote q q:after {
-        content: '”';
-        content: close-quote;
-    }
-    /* hanging opening quote */
-    blockquote:before {
-        display: block;
-        height: 0;
-        content: "“";
-        margin-left: -.95em; font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-        color: #999;
-    }
-
-    blockquote footer,
-    .footer{
-        font-size: 0.9em;
-        text-align: right;
-        margin-top: 0.5em;
-    }
-
-    pre.prettyprint.code{
-        border: 1px solid #888;
-        border-radius: 10px;
-        padding: 5px;
-        background-color: #eee;
-        font-size: 26px;
-        line-height: 1.4em;
-        margin: 10px 0 20px;
-        word-wrap: break-word;
-    }
-
-    .example-label{
-        font-weight: bold;
-    }
-
-    .footnote-reference{
-        vertical-align: super;
-        font-size: small;
-    }
-
-    .footnote,
-    .footnote sup{
-        font-size: 22px;
-    }
-
-    .footnote sup{
-        padding-right: 5px;
-    }
-    
-    code,
-    kbd{
-        font-family: monospace;
-        font-size: 28px;
-        font-weight: bold;
-    }
     
     #change-effects{
         position: fixed;
@@ -523,15 +633,6 @@
     }
 
     .rotate-title{
-        margin-top: 150px;
-        font-weight: bold;
-        text-align: center;
-        font-size: 2em;
-        line-height: 1;
-
-        /*text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #231F20, 0 0 40px #231F20, 0 0 70px #231F20, 0 0 80px #231F20, 0 0 100px #231F20, 0 0 150px #231F20;*/
-        text-shadow: 0 0 5px #231F20;
-
         transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
         transform: perspective(1000px) rotateY(0deg);
@@ -541,7 +642,6 @@
     }
 
     .rotate-title .more{
-        display: inline-block;
         transform: translateZ(40px);
         -webkit-transform: translateZ(40px);
     }
@@ -552,87 +652,6 @@
         animation: rotate-title 2s infinite alternate ease-in-out;
         -webkit-animation: rotate-title 2s infinite alternate ease-in-out;
     }
-
-    #title .authors{
-        position: absolute;
-        bottom: 40px;
-        text-align: center;
-        width: 780px;
-    }
-
-    #title .authors .name{
-        font-weight: bold;
-    }
-
-    #title.slide{
-        background-color: transparent;
-        border: 0px none;
-        box-shadow: 0 0 0 transparent;
-    }
-
-    #global{
-        background-color: transparent;
-        box-shadow: 0 0 0 transparent;
-    }
-
-    .lang-css, .lang-html, .lang-js{}
-
-
-
-    /* tables */
-    #tablesexample table{
-        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-        font-size: 24px;
-        width: 100%;
-        text-align: left;
-        border-collapse: collapse;
-    }
-    #tablesexample table thead th:first-child{
-        background: #b9c9fe;
-        border-radius: 10px 0 0;
-    }
-    #tablesexample table thead th:last-child{
-        background: #b9c9fe;
-        border-radius: 0 10px 0 0;
-    }
-    #tablesexample caption{
-        caption-side: bottom;
-        background-color: #e8edff;
-        border-radius: 0 0 10px 10px;
-        border-top: 1px solid #fff;
-        padding: 10px;
-        font-size: 20px;
-    }
-    #tablesexample table th{
-        padding: 8px;
-        font-weight: normal;
-        font-size: 24px;
-        color: #039;
-        background: #b9c9fe;
-        text-align: center;
-    }
-    #tablesexample table td{
-        padding: 8px;
-        background: #e8edff;
-        border-top: 1px solid #fff;
-        color: #669;
-        text-align: center;
-    }
-    #tablesexample table tbody tr:hover td{
-        background: #d0dafd;
-    }
-
-    #tablesexample td[scope],
-    #tablesexample th[scope]{
-        font-weight:bold;
-    }
-
-
-
-    #tablesexamplecode .code{
-        font-size: 16px;
-    }
-
 
     /*
         Now, when we have all the steps styled let's give users a hint how to navigate
@@ -826,10 +845,37 @@
 }
 
 @media print{
+    .no-print,
     .fallback-message,
     .hint,
     #change-effects,
     .screen-reader-text{
         display: none;
     }
+    
+    .slide{
+        page-break-after: always;
+        height: 100%;
+    }
+    
+    a[target="_blank"]:after,
+    a[target="_blank"]:link:after, 
+    a[target="_blank"]:visited:after { 
+        content: " [" attr(href) "] "; 
+        font-size: 90%; 
+        color: #666;
+    } 
+    a[href^="mailto"]:after, 
+    a[href^="mailto"]:link:after, 
+    a[href^="mailto"]:visited:after { 
+        content: "";
+        display: none;
+    }
+    
+    a,
+    a:not([target="_blank"]){
+        color: #231F20;
+        text-decoration:none;
+    }
+        
 }
