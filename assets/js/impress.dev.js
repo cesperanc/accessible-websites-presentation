@@ -177,12 +177,12 @@ if (window.matchMedia && window.matchMedia('screen')) {
 
         // and `classList` and `dataset` APIs
         (body.classList) &&
-            (body.dataset) &&
+            (body.dataset)/* &&
 
         // but some mobile devices need to be blacklisted,
         // because their CSS 3D support or hardware is not
         // good enough to run impress.js properly, sorry...
-        (ua.search(/(iphone)|(ipod)|(android)/) === -1);
+        (ua.search(/(iphone)|(ipod)|(android)/) === -1)*/;
 
         if (!impressSupported) {
             // we can't be sure that `classList` is supported
@@ -203,7 +203,7 @@ if (window.matchMedia && window.matchMedia('screen')) {
         var defaults = {
             width: 1024,
             height: 768,
-            maxScale: 1,
+            maxScale: 2,
             minScale: 0,
 
             perspective: 1000,
@@ -779,28 +779,25 @@ if (window.matchMedia && window.matchMedia('screen')) {
             //   as another way to moving to next step... And yes, I know that for the sake of
             //   consistency I should add [shift+tab] as opposite action...
             document.addEventListener("keyup", function (event) {
-                if ( /*event.keyCode === 8 || event.keyCode === 9 ||*/ (event.keyCode >= 32 && event.keyCode <= 34) || (event.keyCode >= 37 && event.keyCode <= 40)) {
+                if ( /*event.keyCode === 8 || event.keyCode === 9 ||*/ (event.keyCode >= 32 && event.keyCode <= 40)) {
                     switch (event.keyCode) {
-                        //case 8: // backspace
-                    case 33:
-                        // pg up
-                    case 37:
-                        // left
-                    case 38:
-                        // up
+                        //case 8:
+                    case 33: // pg up
+                    case 37: // left
+                    case 8: // backspace
+                    case 38: // up
                         api.prev();
                         break;
                         //case 9:  // tab
-                    case 32:
-                        // space
-                    case 34:
-                        // pg down
-                    case 39:
-                        // right
-                    case 40:
-                        // down
+                    case 32: // space
+                    case 34: // pg down
+                    case 39: // right
+                    case 40: // down
                         api.next();
                         break;
+                    case 36: // home
+                        api.goTo(0);
+                    case 35: // end
                     }
 
                     event.preventDefault();
@@ -869,7 +866,7 @@ if (window.matchMedia && window.matchMedia('screen')) {
             // rescale presentation when window is resized
             window.addEventListener("resize", throttle(function () {
                 // force going to active step again, to trigger rescaling
-                api.goTo(document.querySelector(".active"), 500);
+                api.goTo(document.querySelector(".step.active"), 500);
             }, 250), false);
 
         }, false);

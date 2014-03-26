@@ -1,7 +1,7 @@
 LICENSE
 ---------
 
-Copyright 2013 - Cláudio Esperança and Diogo Serra
+Copyright 2013-2014 - Cláudio Esperança
 
 Released under the GPL v3 License.
 

@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,600,300,700");
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -137,7 +139,8 @@ small{
     border-radius: 20px 0 0 20px;
 }
 
-.slide .title .corner{
+.slide .title:after{
+    content:" ";
     float: left;
     display: inline-block;
     width: 0;
@@ -323,6 +326,10 @@ kbd{
     font-weight: bold;
 }
 
+.line-through{
+    text-decoration: line-through;
+}
+
 
 .rotate-title{
     margin-top: 150px;
@@ -345,13 +352,18 @@ kbd{
 
 #title .authors{
     position: absolute;
-    bottom: 40px;
+    bottom: 120px;
     text-align: center;
     width: 780px;
 }
 
 #title .authors .name{
     font-weight: bold;
+}
+
+ul.authors{
+    list-style: none;
+    padding-left: 0;
 }
 
 #title.slide{
@@ -394,7 +406,7 @@ kbd{
     padding: 10px;
     font-size: 20px;
 }
-#tablesexample table th{
+#tablesexample table thead th{
     padding: 8px;
     font-weight: normal;
     font-size: 24px;
@@ -402,14 +414,16 @@ kbd{
     background: #b9c9fe;
     text-align: center;
 }
-#tablesexample table td{
+#tablesexample table tbody td,
+#tablesexample table tbody th{
     padding: 8px;
     background: #e8edff;
     border-top: 1px solid #fff;
     color: #669;
     text-align: center;
 }
-#tablesexample table tbody tr:hover td{
+#tablesexample table tbody tr:hover td,
+#tablesexample table tbody tr:hover th{
     background: #d0dafd;
 }
 
@@ -614,43 +628,74 @@ kbd{
     
     /* Title frame */
     
-    @keyframes rotate-title {
-        from {
-            transform: perspective(1000px) rotateY(-10deg);
-        }
-        to {
-            transform: perspective(1000px) rotateY(10deg); 
-        }
-    }
-
     @-webkit-keyframes rotate-title {
         0%   { 
-        -webkit-transform: perspective(1000px) rotateY(-10deg);
+            -webkit-transform: perspective(1000px) rotateY(-10deg);
         }
         100% { 
             -webkit-transform: perspective(1000px) rotateY(10deg); 
         }
     }
 
+    @-moz-keyframes rotate-title {
+        0%   { 
+            -moz-transform: perspective(1000px) rotateY(-10deg);
+        }
+        100% { 
+            -moz-transform: perspective(1000px) rotateY(10deg); 
+        }
+    }
+
+    @-o-keyframes rotate-title {
+        0%   { 
+            -o-transform: perspective(1000px) rotateY(-10deg);
+        }
+        100% { 
+            -o-transform: perspective(1000px) rotateY(10deg); 
+        }
+    }
+    
+    @keyframes rotate-title {
+        0% {
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(10deg); 
+        }
+    }
+
     .rotate-title{
-        transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
-        transform: perspective(1000px) rotateY(0deg);
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
         -webkit-transform: perspective(1000px) rotateY(0deg);
-        transition: all 2s ease-in-out;
+        -moz-transform: perspective(1000px) rotateY(0deg);
+        -ms-transform: perspective(1000px) rotateY(0deg);
+        -o-transform: perspective(1000px) rotateY(0deg);
+        transform: perspective(1000px) rotateY(0deg);
+        
         -webkit-transition: all 2s ease-in-out;
+        -moz-transition: all 2s ease-in-out;
+        -o-transition: all 2s ease-in-out;
+        transition: all 2s ease-in-out;
     }
 
     .rotate-title .more{
-        transform: translateZ(40px);
         -webkit-transform: translateZ(40px);
+        -moz-transform: translateZ(40px);
+        -ms-transform: translateZ(40px);
+        -o-transform: translateZ(40px);
+        transform: translateZ(40px);
     }
 
     .present .rotate-title,
     .past .rotate-title,
     .future .rotate-title{
-        animation: rotate-title 2s infinite alternate ease-in-out;
         -webkit-animation: rotate-title 2s infinite alternate ease-in-out;
+        -moz-animation: rotate-title 2s infinite alternate ease-in-out;
+        -o-animation: rotate-title 2s infinite alternate ease-in-out;
+        animation: rotate-title 2s infinite alternate ease-in-out;
     }
 
     /*
