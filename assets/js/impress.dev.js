@@ -628,26 +628,6 @@ if (window.matchMedia && window.matchMedia('screen')) {
             // animations when step is shown.
             root.addEventListener("impress:init", function () {
                 // STEP CLASSES
-                /*
-                steps.forEach(function (step) {
-                    step.classList.add("future");
-                });
-
-                root.addEventListener("impress:stepenter", function (event) {
-                    event.target.classList.remove("past");
-                    event.target.classList.remove("future");
-                    event.target.classList.add("present");
-                }, false);
-
-                root.addEventListener("impress:stepleave", function (event) {
-                    event.target.classList.remove("present");
-                    event.target.classList.add("past");
-                }, false);
-                */
-
-                steps.forEach(function (step) {
-                    //step.classList.add("future");
-                });
                 root.addEventListener("impress:stepenter", function (event) {
                     event.target.classList.add("present");
                     event.target.classList.remove("past");
@@ -874,9 +854,23 @@ if (window.matchMedia && window.matchMedia('screen')) {
     })(document, window);
 
     // C3
-    if ("ontouchstart" in document.documentElement) {
-        document.querySelector(".hint").innerHTML = "<p>Toque à esquerda ou à direita para navegar</p>";
+    var impress = window.impress;
+    if(impress.supported){
+        var el =  document.createElement("div");
+        el.classList.add("hint");
+        el.innerHTML="<p>Utilize a barra de espaços ou as setas direcionais para navegar</p>";
+        document.body.appendChild(el);
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Toque à esquerda ou à direita para navegar</p>";
+        }
     }
+    var el =  document.createElement("a");
+    el.setAttribute("id", "change-effects");
+    el.setAttribute("aria-live", "assertive");
+    el.setAttribute("href", "#");
+    el.setAttribute("title", "Utilize esta hiperligação para desativar ou ativar os efeitos gráficos");
+    el.innerHTML='Ativar/desativar efeitos gráficos';
+    document.body.appendChild(el);
 
     var ImpressCookie = {
         /* cookies methods */
