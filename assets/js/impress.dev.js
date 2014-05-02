@@ -842,6 +842,18 @@ if (window.matchMedia && window.matchMedia('screen')) {
                     }
                 }
             }, false);
+            
+            var mouseWheelListener = function(e){
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))*(-1);
+                if(delta>0){
+                    api.next();
+                }else{
+                    api.prev();
+                }
+            };
+            
+            document.addEventListener("mousewheel", mouseWheelListener, false);
+            document.addEventListener("DOMMouseScroll", mouseWheelListener, false); // Firefox
 
             // rescale presentation when window is resized
             window.addEventListener("resize", throttle(function () {
