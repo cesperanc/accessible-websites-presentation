@@ -6,7 +6,7 @@
 
 (function (document, window, ImpressL10n) {
     'use strict';
-    var impress = window.impress, el;
+    var impress = window.impress, el, impress_toolbar = document.getElementById("impress-toolbar");
     if (impress.supported) {
         el = document.createElement("div");
         el.classList.add("hint");
@@ -16,13 +16,17 @@
             document.querySelector(".hint").innerHTML = "<p>"+ImpressL10n.touchNavigationTip+"</p>";
         }
     }
+    if(impress_toolbar){
     el = document.createElement("a");
     el.setAttribute("id", "change-effects");
+        el.setAttribute("class", "impress-tool");
     el.setAttribute("aria-live", "assertive");
     el.setAttribute("href", "#");
     el.setAttribute("title", ImpressL10n.manageVisualEffectsHint);
     el.innerHTML = ImpressL10n.manageVisualEffects;
-    document.body.appendChild(el);
+
+        impress_toolbar.appendChild(el);
+    }
 
     var ImpressCookie = {
         /* cookies methods */

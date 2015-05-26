@@ -548,6 +548,9 @@ ul.authors{
     .impress-loading .step{
         opacity: 0;
     }
+    .no-js .impress-loading .step{
+        opacity: inherit;
+    }
 
     /*
         Now let's style the presentation steps.
@@ -624,20 +627,34 @@ ul.authors{
 
 
     
-    #change-effects{
+    #impress-toolbar{
         position: fixed;
         top: 0;
         right: 0;
-        opacity: 0;
         -webkit-transition: opacity 1s;
         -moz-transition:    opacity 1s;
         -ms-transition:     opacity 1s;
         -o-transition:      opacity 1s;
         transition:         opacity 1s;
     }
+    
+    .impress-tool{
+        opacity: 0;
+        margin-left: 0.5em;
+        padding: 0.25em;
+        display: inline-block;
+    }
+    
+    .impress-tool:first-child{
+        margin-left: 0;
+    }
+    
+    .lang-selector.current-lang{
+        font-weight: bold;
+    }
 
-    .impress-supported.impress-on-title.impress-effects-enabled #change-effects,
-    .impress-supported.impress-effects-disabled #change-effects{
+    .impress-supported.impress-on-title.impress-effects-enabled .impress-tool,
+    .impress-supported.impress-effects-disabled .impress-tool{
         pointer-events: auto;
         opacity: 1;
     }
@@ -923,7 +940,7 @@ ul.authors{
     .no-print,
     .fallback-message,
     .hint,
-    #change-effects,
+    #impress-tools,
     .screen-reader-text{
         display: none;
     }
