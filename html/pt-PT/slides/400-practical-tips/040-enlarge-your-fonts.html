@@ -1,0 +1,25 @@
+<article id="enlarge-your-fonts" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Aumente o tamanho da letra</span></h2>
+    <ul>
+        <li>É recomendado um tamanho de, pelo menos, <strong>16px</strong> efetivos.</li>
+        <li>O texto deve ser legível a um metro do ecrã.</li>
+        <li>Utilize tamanhos relativos<sup class="footnote-reference"><a title="Siga a hiperligação para ler a nota" href="#attention-to-relative-font-sizes">1</a></sup><code title="Código CSS para definição de tamanhos relativos" class="code prettyprint lang-css">html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6em; /* aproximadamente 16px */
+}</code></li>
+    </ul>
+    <div id="attention-to-relative-font-sizes" class="footnote"><a title="Siga a hiperligação para ver um exemplo" href="#relative-text-sizes"><sup class="footnote-reference">1</sup>Atenção à herança de tamanhos</a></div>
+</article>
+
+<article id="relative-text-sizes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Herança de tamanhos</span></h2>
+    <p class="example-label">Atenção à herança de tamanhos!</p>
+    <code title="Código CSS com a representação da herança de tamanhos" class="code prettyprint lang-css">body {
+    font-size: 1.6em; /* &plusmn;16px */
+}
+h1 {
+    font-size: 2em; /* 1.6em*2em&cong;<span class="nocode"><strong>3.2em</strong></span> (32px e não 20px) */
+}</code>
+</article>

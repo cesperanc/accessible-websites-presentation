@@ -1,0 +1,35 @@
+<article id="alternative-navigation-modes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos</span></h2>
+    <ul>
+        <li>Nem todos os utilizadores recorrem ao rato para navegar na <em lang="en">web</em>.</li>
+        <li>É importante garantir que estes utilizadores não são negligenciados, através da <strong>implementação do suporte a métodos de navegação alternativos</strong> tais como navegação com o teclado, ecrãs táteis, etc.</li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos (2)</span></h2>
+    <ul>
+        <li>A execução de ações apenas no <code>:hover</code> é um dos erros mais comuns<code title="Código CSS de execução de ações apenas no evento hover" class="code prettyprint lang-css">a:hover{
+    text-decoration: underline;
+}</code></li><li>Solução: aplicar o mesmo efeito também no <code>:focus</code><code title="Código CSS" class="code prettyprint lang-css">
+a:hover,
+a:focus,
+a:active{
+    text-decoration: underline;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos (3)</span></h2>
+    <ul>
+        <li>A utilização de código <em lang="en">JavaScript</em> pode ser útil para adaptar comportamento às caraterísticas da aplicação cliente.</li>
+        <li>Por exemplo, pode modificar-se o comportamento se for detetada a presença de um interface tátil: <code title="Código JavaScript para deteção simples de um interface tátil" class="code prettyprint lang-js">if("ontouchstart" in window){
+/* Interface tátil; definir código para expandir o menu ao toque */
+}else{
+/* Interface não tátil; definir código para expandir o menu ao focar ou deslocar o rato sob o mesmo */
+}</code></li>
+    </ul>
+</article>

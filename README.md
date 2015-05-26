@@ -1,8 +1,6 @@
-LICENSE
+Presentation about accessible websites development
 ---------
 
-Copyright 2013-2014 - Cláudio Esperança
-
-Released under the GPL v3 License.
+Presentation with an [Introduction to the development of more accessible websites](http://cesperanc.github.io/accessible-websites-presentation/) - in Portuguese.
 
 

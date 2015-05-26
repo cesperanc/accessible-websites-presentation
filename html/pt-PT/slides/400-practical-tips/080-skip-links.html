@@ -1,0 +1,64 @@
+<article id="skip-links" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações de salto</span></h2>
+    <ul>
+        <li>Nem todos os utilizadores utilizam um rato ou uma superfície tátil para navegar num <em lang="en">site</em>.</li>
+        <li>As hiperligações de salto fornecem um mecanismo para que um utilizador possa ter <strong>acesso facilitado ao conteúdo ou saltar grandes blocos de informação</strong>.</li>
+        <li>É particularmente útil para utilizadores que navegam com o teclado (por exemplo, utilização da tecla <kbd>Tabulação</kbd>) ou com outros dispositivos de mudança de foco passo a passo.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações de salto (2)</span></h2>
+    <ul>
+        <li>As hiperligações de salto não são mais do que do que hiperligações normais cujo o destino são âncoras para identificadores existentes na página.
+            <code title="Código HTML com um exemplo de uma hiperligação de salto" class="code prettyprint lang-html">&lt;a href="#content" title="Siga a hiperligação para saltar para o conteúdo da página" class="skip-link"&gt;Ir para o conteúdo&lt;/a&gt;
+&lt;!-- HTML para banners, menus, etc --&gt;
+&lt;div id="content"&gt;&lt;!-- Conteúdo... --&gt;&lt;/div&gt;</code></li>
+        <li><a href="http://www.acessibilidade.gov.pt/w3/TR/WCAG20-TECHS/G1.html" target="_blank" title="Siga a hiperligação para consultar a página de referência">A primeira hiperligação do documento deve apontar diretamente para o conteúdo.</a></li>
+        <li>Hiperligações de salto para grandes blocos de hiperligações são também recomendadas.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto</span></h2>
+    <ul>
+        <li>As hiperligações de salto não devem ser escondidas quando estão ativas<code title="Código CSS não aconselhável para hiperligações de salto" class="code prettyprint lang-css">.skip-link{
+    text-indent: -9999px; /* Errado */
+}
+.skip-link{
+    display: none; /* Muito errado!!! */
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto (2)</span></h2>
+    <ul>
+        <li>As hiperligações de salto podem ser escondidas da área vísivel <strong>apenas</strong> quando não estão ativas<code title="Código CSS para ocultar hiperligações de salto" class="code prettyprint lang-css">a.skip-link,
+a.skip-link:hover,
+a.skip-link:visited{
+    position:absolute;
+    left:0px;
+    top:-1000px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto (3)</span></h2>
+    <ul>
+        <li>No entanto estas devem ser apresentadas quando estão em foco (por exemplo, na navegação por teclado)<code title="Código CSS para mostrar hiperligações de salto em foco" class="code prettyprint lang-css">a.skip-link:active,
+a.skip-link:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}</code></li>
+    </ul>
+</article>

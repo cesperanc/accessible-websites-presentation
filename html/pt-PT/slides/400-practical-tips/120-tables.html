@@ -1,0 +1,99 @@
+<article id="tables" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Tabelas</span></h2>
+    <ul>
+        <li>As tabelas servem para mostrar informação num formato tabular e <strong>não devem ser utilizadas para definir a estrutura ou <em lang="en">layout</em></strong> de um <em lang="en">site</em>!!!
+            <a href="http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=56ce2fc4-629b-e011-969d-0030487d8897&amp;vsro=8&amp;JSEnabled=1" target="_blank" title="Siga a hiperligação para ver um exemplo do que não se deve fazer">
+                <img alt="Página do Microsoft DreamSpark" src="images/sh2.png"/>
+            </a>
+        </li>
+    </ul>
+</article>
+
+
+<article id="tables-rules" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Título das tabelas</span></h2>
+    <ul>
+        <li>Deve ser definido um <strong><span class="line-through">sumário e </span>título</strong> para a tabela.</li>
+        <li>O <strong>título</strong> é geralmente apresentado ao utilizador e funciona como uma <strong>legenda da tabela</strong>.</li>
+        <li>A utilização do <strong>sumário</strong> através do atributo <code>summary</code> é desaconselhada no <abbr lang="en" title="HyperText Markup Language">HTML</abbr> 5 e a descrição da tabela deve ser feita através do <code>caption</code> ou através de uma <em lang="en">tag</em> <code>figure</code> que englobe a tabela.</li>
+    </ul>
+    <code title="Código HTML com um exemplo de uma tabela com legenda" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por UCs&lt;/caption&gt; (...) 
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="tables-rules-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Estrutura formal das tabelas</span></h2>
+    <ul>
+        <li>É recomendável a definição de uma zona de <strong>cabeçalho</strong> e de <strong>conteúdo</strong> que forneçam informações sobre a estrutura da tabela.</li>
+        <li>Opcionalmente pode ser definido também um <strong>rodapé</strong> que, em conjunto com o cabeçalho, pode ser repetido em caso de quebra de página (na impressão).</li>
+    </ul>
+    <code title="Código HTML com a estrutura formal de uma tabela" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por UCs&lt;/caption&gt;
+    &lt;thead&gt;&lt;!-- Células de cabeçalho (...) --&gt;&lt;/thead&gt;
+    &lt;tfoot&gt;&lt;!-- Células de rodapé (opcional) (...) --&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;&lt;!-- Células de conteúdo (...) --&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-code-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Exemplo de código de uma tabela</span></h2>
+    <code title="Código HTML com o exemplo completo de uma tabela" class="code prettyprint lang-html" style="font-size: 0.5em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por Unidades Curriculares (de 0 a 20 valores)&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;&lt;span title="N&uacute;mero do aluno"&gt;Aluno&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="UC de Qualidade de Servi&ccedil;os em Rede"&gt;QSR&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="UC de Computa&ccedil;&atilde;o em Ambientes Distribu&iacute;dos"&gt;CAD&lt;/span&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120915&lt;/th&gt;
+            &lt;td&gt;19&lt;/td&gt;
+            &lt;td&gt;17&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120917&lt;/th&gt;
+            &lt;td&gt;18&lt;/td&gt;
+            &lt;td&gt;18&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Resultado do exemplo anterior</span></h2>
+    <table>
+        <caption>Tabela 1: Avaliações dos alunos por Unidades Curriculares (de 0 a 20 valores)</caption>
+        <thead>
+            <tr>
+                <th scope="col"><span title="N&uacute;mero do aluno">Aluno</span></th>
+                <th scope="col"><span title="UC de Qualidade de Servi&ccedil;os em Rede">QSR</span></th>
+                <th scope="col"><span title="UC de Computa&ccedil;&atilde;o em Ambientes Distribu&iacute;dos">CAD</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">2120915</th>
+                <td>19</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <th scope="row">2120917</th>
+                <td>18</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+
+
+<article id="tables-more-information" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Mais sobre tabelas</span></h2>
+    <p>Interpretar uma tabela complexa apenas com recurso à audição pode ser algo bastante difícil pelo que se recomenda que as <strong>tabelas</strong> sejam <strong>simplificadas sempre que possível</strong>.</p>
+    <p>Existem mais algumas instruções <abbr lang="en" title="HyperText Markup Language">HTML</abbr> para construção de tabelas mais complexas que não foram abordadas. Em caso de necessidade estas opções adicionais podem e devem ser exploradas para facilitar a interpretação dos dados a apresentar.</p>
+</article>

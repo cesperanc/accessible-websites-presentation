@@ -1,0 +1,31 @@
+<article id="links-without-content" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações sem conteúdo</span></h2>
+    <ul>
+        <li>As hiperligações devem ter sempre conteúdo (não basta apenas definir o endereço de destino)
+            <code title="Código HTML com texto desadequado para as hiperligações" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/"&gt;&lt;/a&gt;&lt;!-- Errado!  --&gt;
+&lt;a href="http://exemplo.com/"&gt;&lt;img src="imagem.png" alt=""&gt;&lt;/a&gt;&lt;!-- Errado!  --&gt;</code></li>
+        <li>O texto é importante para dar um contexto à hiperligação<code title="Código HTML com hiperligações com contexto" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/"&gt;Texto&lt;/a&gt;&lt;!-- Melhor  --&gt;
+&lt;a href="http://exemplo.com/"&gt;&lt;img src="imagem.png" alt="Texto"&gt;&lt;/a&gt;&lt;!-- Melhor  --&gt;</code></li>
+    </ul>
+</article>
+
+
+<article id="links-text" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Texto das hiperligações</span></h2>
+    <ul>
+        <li>O texto das hiperligações não deve ser repetido no mesmo documento.</li>
+        <li>Textos genéricos, que não fornecem informação de contexto sobre a hiperligação, não são adequados: 
+            <code title="Código HTML com uma hiperligação com texto genérico" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/documentoxpto.pdf"&gt;Clique aqui&lt;/a&gt; para descarregar o documento XPTO.&lt;!-- Errado!  --&gt;</code></li>
+        <li>Expressões como "clique aqui" são desaconselhadas (existem utilizadores que não "clicam").</li>
+    </ul>
+</article>
+
+
+<article id="example-link" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternativa ao exemplo anterior</span></h2>
+    <code title="Código HTML com uma hiperligação com texto mais completo" class="code prettyprint lang-html">&lt;a target="_blank" title="Siga a hiperligação para aceder ao documento XPTO em uma nova janela ou separador" href="http://exemplo.com/documentoxpto.pdf"&gt;Descarregue documento XPTO (&lt;abbr lang="en" title="Portable Document Format"&gt;PDF&lt;/abbr&gt;)&lt;/a&gt;.</code>
+    <ul>
+        <li>Caso se aplique, é recomendável informar o utilizador que o destino da hiperligação será apresentado numa nova janela/separador.</li>
+        <li>É ainda aconselhável indicar o tipo de documento associado à hiperligação (caso este não seja uma página <abbr lang="en" title="HyperText Markup Language">HTML</abbr>).</li>
+    </ul>
+</article>
