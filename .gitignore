@@ -10,3 +10,8 @@ nbproject
 .project
 .settings
 /_tools/*.jar
+/.project
+.sass-cache/*
+/*/.sass-cache
+node_modules/*
+/*/.gitignore

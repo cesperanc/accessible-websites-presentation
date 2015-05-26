@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-PT"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-PT"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-PT"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-PT"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title data-l10n-id="pageTitle">Introdução ao desenvolvimento de sítios web (+) acessíveis</title>
+        <meta name="viewport" content="width=1024" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <meta name="description" content="Informações gerais sobre algumas técnicas e recomendações para o desenvolvimento de sítios web mais acessíveis" />
+        <meta name="author" content="Cláudio Esperança" />
+
+        <link href="assets/css/styles.css" rel="stylesheet"/>
+
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+        <link href="assets/vendor/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+
+        <script src="assets/vendor/modernizr/modernizr.min.js"></script>
+         
+    </head>
+
+    <body class="impress-loading">
+        <a class="screen-reader-text no-print" href="#index" title="Siga a hiperligação para ir para o ínicio">Ir para o inicio</a>
+
+        <div class="fallback-message no-print">
+            <p>O seu navegador <strong>não suporta</strong> todas as funcionalidades necessárias para esta apresentação.</p>
+            <p>Para uma melhor experiência utilize a última versão do <a href="http://www.google.com/intl/pt-PT/chrome/browser/" target="_blank" title="Siga a hiperligação para visitar a página do Google Chrome">Google Chrome</a>.</p>
+        </div>
+
+        <section id="impress">
+<article id="title" class="step slide no-number" data-x="0" data-y="0" data-z="2000" data-rotate-Y="90" data-scale="2">
+    <h1 class="rotate-title" data-l10n-id="title">Introdução ao desenvolvimento de <span lang="en">sites</span> <span lang="en">web</span> <span class="more">(+)</span> acessíveis</h1>
+    <ul class="authors">
+        <li><span class="name">Cláudio Esperança &lt;<a href="mailto:cesperanc@gmail.com?subject=Introdução%20ao%20desenvolvimento%20de%20sites%20acessíveis" target="_blank" title="Siga a hiperligação para enviar uma mensagem de correio eletrónico a Cláudio Esperança">cesperanc@gmail.com</a>&gt;</span></li>
+    </ul>
+    <a class="link" href="http://cesperanc.github.io/accessible-websites-presentation/">http://cesperanc.github.io/accessible-websites-presentation/</a>
+</article>
+<article id="index" class="step slide" data-x="2000" data-y="0" data-z="0">
+    <h2 class="title"><span class="label">Índice</span></h2>
+    <nav>
+        <ul>
+            <li><a href="#contextualization">Motivação</a></li>
+            <li><a href="#definition">Definição de Acessibilidade</a></li>
+            <li><a href="#users-with-disabilities">Número de utilizadores com deficiência</a></li>
+            <li><a href="#type-of-disabilities">Tipos de deficiência</a></li>
+            <li><a href="#accessibility-as-a-tool">A acessibilidade como uma ferramenta</a></li>
+            <li><a href="#acting-areas">Áreas de atuação</a></li>
+            <li><a href="#web-pages">Páginas Web</a>: <a href="#html"><abbr lang="en" title="HyperText Markup Language">HTML</abbr></a>, <a href="#css"><abbr title="Cascading Style Sheets">CSS</abbr></a> e <a href="#javascript"><em lang="en">JavaScript</em></a></li>
+            <li class="no-print"><a href="#index-2"><small>(continua no diapositivo 2...)</small></a></li>
+        </ul>
+    </nav>
+</article>
+<article id="index-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Índice (2)</span></h2>
+    <nav>
+        <ul>
+            <li>Dicas práticas:
+                <ul>
+                    <li><a href="#lang-attribute">Definições de idioma</a></li>
+                    <li><a href="#page-titles">Títulos das páginas</a></li>
+                    <li><a href="#headings">Cabeçalhos</a></li>
+                    <li><a href="#enlarge-your-fonts">Tamanhos de letra</a></li>
+                    <li><a href="#text-spacing">Espaçamentos e alinhamento do texto</a></li>
+                    <li><a href="#links-without-content">Hiperligações</a></li>
+
+                    <li class="no-print"><a href="#index-3"><small>(continua no diapositivo 3...)</small></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</article>
+<article id="index-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Índice (3)</span></h2>
+    <nav>
+        <ul>
+            <li>Dicas práticas (continuação):
+                <ul>
+                    <li><a href="#skip-links">Hiperligações de salto</a></li>
+                    <li><a href="#links-outline">Limite de foco de ligações</a></li>
+                    <li><a href="#menu-links">Menus</a></li>
+                    <li><a href="#alternative-navigation-modes">Métodos de navegação alternativos</a></li>
+                    <li><a href="#tables">Tabelas</a></li>
+                    <li><a href="#images">Imagens</a></li>
+                    <li class="no-print"><a href="#index-4"><small>(continua no diapositivo 4...)</small></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</article>
+<article id="index-4" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Índice (4)</span></h2>
+    <nav>
+        <ul>
+            <li>Dicas práticas (continuação):
+                <ul>
+                    <li><a href="#color-contrast">Contraste de cores</a></li>
+                    <li><a href="#labels">Etiquetas de campos de formulário</a></li>
+                    <li><a href="#form-grouping">Agrupamentos em formulários</a></li>
+                    <li><a href="#button-sizes">Tamanho dos botões</a></li>
+                </ul>
+            </li>
+            <li><a href="#accessibility-enhancements">Ferramentas de acessibilidade</a></li>
+            <li><a href="#progressive-enhancement-and-graceful-degration"><em lang="en">Progressive Enhancement</em> e <em lang="en">Graceful Degration</em></a></li>
+            <li><a href="#tests-and-validation">Testes e validação</a></li>
+            <li><a href="#standards">Algumas normas importantes</a></li>
+        </ul>
+    </nav>
+</article>
+<article id="contextualization" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Motivação</span></h2>
+    <ul>
+        <li>Apresentação no âmbito da unidade curricular de <strong>Seminário</strong> do Mestrado em Engenharia Informática (Computação móvel) da <a href="http://www.estg.ipleiria.pt" target="_blank" title="Siga a hiperligação para visitar a página do Escola Superior de Tecnologia e Gestão de Leiria"><abbr title="Escola Superior de Tecnologia e Gestão de Leiria">ESTG</abbr></a> e do ano do <strong><a href="http://maisinclusivo.ipleiria.pt" target="_blank" title="Siga a hiperligação para visitar a página do IPL (+) Inclusivo">IPL (+) Inclusivo</a></strong>.</li>
+        <li>Desde o dia 8 de fevereiro de 2013 que <strong>todos os <em lang="en">sites</em></strong> que disponibilizam informação ou serviços <em lang="en">online</em> <strong>são obrigados a cumprir</strong>, respetivamente, <strong>os níveis A e AA</strong> das <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 - conjugação da lei que estabelece a adopção de normas abertas (<a href="http://m6.ama.pt/docs/Lei362011-NormasAbertas.pdf" target="_blank" title="Siga a hiperligação para consultar o documento">lei nº 36/2011</a>) e do <abbr title="Regulamento Nacional de Interoperabilidade Digital">RNID</abbr> (<a href="http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf" target="_blank" title="Siga a hiperligação para consultar o documento">RCM nº91/2012</a>).</li>
+    </ul>
+    <div class="footer">— <cite><a href="http://www.acessibilidade.gov.pt/" title="Siga a hiperligação para consultar a página de referência desta informação" target="_blank">Unidade ACESSO da FCT</a></cite></div>
+</article>
+<article id="definition" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Definição de Acessibilidade</span></h2>
+    <blockquote cite="http://iact.ipleiria.pt/concepts/acessibilidade/">
+        <dl>
+            <dt>Acessibilidade</dt>
+            <dd>diz respeito ao meio e aos recursos que potenciam as competências de quem os utiliza, <strong>reduzindo o efeito de barreiras existentes.</strong></dd>
+        </dl>
+        <footer>— <cite><a href="http://iact.ipleiria.pt/concepts/acessibilidade/" title="Siga a hiperligação para consultar a página de referência desta citação" target="_blank"><abbr title="Inclusão e Acessibilidade em Ação">iACT</abbr></a></cite></footer>
+    </blockquote>
+</article>
+<article id="users-with-disabilities" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Número de utilizadores com deficiência</span></h2>
+    <ul>
+        <li>As pessoas com deficiências fazem parte do <strong>maior grupo minoritário do Mundo</strong>.</li>
+        <li>Atualmente estima-se que <span title="650 milhões de pessoas" style="font-weight: bold;">10% da população mundial</span> tem algum tipo de deficiência.</li>
+        <li><strong>Este número tem tendência a subir</strong> à medida que a população vai envelhecendo.</li>
+        <li>Em países com uma esperança média de vida superior a 70 anos, <strong>as pessoas vivem aproximadamente <span title="8 anos">12% da sua vida</span> com algum tipo de deficiência</strong>.</li>
+    </ul>
+    <div class="footer">— <cite><a href="http://www.disabled-world.com/disability/statistics/" title="Siga a hiperligação para consultar a página de referência desta informação" target="_blank">Disabled World</a></cite></div>
+</article>
+<article id="type-of-disabilities" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Alguns tipos de deficiência</span></h2>
+    <ul>
+        <li>Visão (cegueira, baixa visão, daltonismo, etc)</li>
+        <li>Audição</li>
+        <li>Mobilidade</li>
+        <li>Cognitivas</li>
+        <li>Etc.</li>
+    </ul>
+</article>
+<article id="accessibility-as-a-tool" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">A acessibilidade como uma ferramenta</span></h2>
+    <ul>
+        <li><strong>Preocupações com a acessibilidade tendem a melhorar a qualidade do software e respetivos conteúdos</strong>.</li>
+        <li>No entanto, ao resolver os problemas de acessibilidade para alguns utilizadores <strong>não se devem criar problemas para os restantes</strong>.</li>
+        <li>Podem ser fornecidas funcionalidades adicionais para melhorar a experiência de alguns utilizadores, mas a solução no seu todo <strong>não deve diferenciar utilizadores</strong>.</li>
+    </ul>
+</article>
+<article id="acting-areas" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Áreas de atuação</span></h2>
+    <ul>
+        <li>Estrutura do <em lang="en">site</em> (ou aplicação)</li>
+        <li>Conteúdos (como texto, imagem ou vídeo)</li>
+        <li>Formulários (e outros elementos interativos)</li>
+    </ul>
+</article>
+<article id="web-pages" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Páginas Web</span></h2>
+    <p>
+        As páginas Web são geralmente baseadas em três linguagens:
+    </p>
+    <ul>
+        <li>O <strong><abbr lang="en" title="HyperText Markup Language">HTML</abbr></strong> como linguagem essencial para <strong>representação de conteúdos</strong> e que faz referência aos recursos que necessita para apresentar a informação.</li>
+        <li>As <strong><abbr title="Cascading Style Sheets">CSS</abbr></strong> como linguagem auxiliar com instruções sobre o <strong>aspeto visual</strong> de elementos <abbr lang="en" title="HyperText Markup Language">HTML</abbr>.</li>
+        <li>O <strong><em lang="en">JavaScript</em></strong> como linguagem auxiliar para definição de <strong>comportamentos e aspetos funcionais</strong> dos elementos <abbr lang="en" title="HyperText Markup Language">HTML</abbr>.</li>
+    </ul>
+</article>
+<article id="html" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><abbr lang="en" title="HyperText Markup Language">HTML</abbr></span></h2>
+    <ul>
+        <li>O HTML tem uma <strong>sintaxe relativamente simples</strong>. No entanto é importante saber aplicar convenientemente cada uma das suas <em lang="en">tags</em> para obter os resultados mais adequados.</li>
+        <li><strong>Cada <em lang="en">tag</em> tem as suas funções e caraterísticas</strong>, fornecendo informações essenciais sobre o conteúdo e respetiva semântica.</li>
+        <li><strong>Aplicações</strong> como <em lang="en">Browsers</em>, indexadores de motores de pesquisa, leitores de ecrã, etc, <strong>baseiam-se nestas instruções para definir o seu comportamento</strong>.</li>
+    </ul>
+</article>
+<article id="html-tags" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><em lang="en">Tags</em> em <abbr lang="en" title="HyperText Markup Language">HTML</abbr></span></h2>
+    <p>Uma <em lang="en">tag</em> <abbr lang="en" title="HyperText Markup Language">HTML</abbr> é composta por elementos como o nome (obrigatório), atributos (opcional) e valor (opcional)</p>
+    <p><img src="images/tags.png" alt="Imagem com a representação das seguintes tags HTML: &lt;label for=&quot;teste&quot;&gt;Etiqueta de teste:&lt;/label&gt;&lt;input id=&quot;teste&quot; /&gt;" style="margin-top: 20px;"/></p>
+</article>
+<article id="html-structure" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Estrutura formal de uma página Web</span></h2>
+    <p>Uma página Web é composta pela especificação do tipo de documento, um cabeçalho e um corpo.</p>
+    <code title="Código HTML com a estrutura formal de uma página HTML" class="code prettyprint lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título da página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Conteúdo da página
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+</article>
+
+<article id="html-structure-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Estrutura formal de uma página Web (2)</span></h2>
+    <ul>
+        <li>O <code lang="en">doctype</code> define o tipo e versão da especificação que deve ser utilizada para interpretar o documento.</li>
+        <li>No cabeçalho da página (englobado pela <em lang="en">tag</em> <code lang="en">head</code>) geralmente encontramos metadados que caraterizam a página, bem como a especificação de recursos necessários para o correto funcionamento e apresentação da página (por exemplo, ficheiros <abbr title="Cascading Style Sheet">CSS</abbr> e/ou <em lang="en">JavaScript</em>).</li>
+        <li>No corpo da página (englobado pela <em lang="en">tag</em> <code lang="en">body</code>) estão os conteúdos propriamente ditos (texto, imagens, vídeos, etc).</li>
+    </ul>
+</article>
+<article id="css" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Cascading Style Sheet (CSS)</span></h2>
+    <ul>
+        <li>As folhas de estilo <strong>definem a aparência</strong> que os conteúdos devem assumir.</li>
+        <li>Instruções com as especificações de tamanho, cor, espaçamentos, etc., devem ser definidas através desta linguagem, promovendo assim a <strong>separação entre a apresentação e os conteúdos</strong>.</li>
+        <li>As informações de estilos tratam essencialmente aspetos visuais e <strong>são geralmente ignoradas pelos leitores de ecrã</strong> (com algumas exceções).</li>
+    </ul>
+</article>
+
+<article id="css-example" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Exemplo de instruções <abbr title="Cascading Style Sheet">CSS</abbr></span></h2>
+    <p>No exemplo seguinte é apresentado um conjunto de instruções <abbr title="Cascading Style Sheet">CSS</abbr> que define a cor vermelha e o estilo negrito para todos os parágrafos de um documento <abbr lang="en" title="HyperText Markup Language">HTML</abbr>.</p>
+    <code title="Código CSS com um exemplo de uma instrução CSS" class="code prettyprint lang-css">p {
+    color: red;
+    font-weight: bold;
+}</code>
+</article>
+<article id="javascript" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><em lang="en">JavaScript</em></span></h2>
+    <ul>
+        <li>Esta é uma linguagem de programação que permite manipular, adicionar interação, definir comportamentos e até modificar aspetos visuais de elementos <abbr lang="en" title="HyperText Markup Language">HTML</abbr>. 
+            <p class="no-print">Exemplo: </p>
+            <div class="no-print" style="text-align: right;"><input id="javascript-example-btn" type="button" value="Ative este botão"/></div><code title="Código JavaScript para emissão de uma mensagem por JavaScript" class="code prettyprint lang-js" style="font-size: 0.65em;">document.getElementById("javascript-example-btn")
+.addEventListener("click", function () { alert("Ativou o botão!"); }, false);</code>
+    <script>window.addEventListener("load", function () {
+        document.getElementById("javascript-example-btn").addEventListener("click", function () {
+            alert("Ativou o botão!");
+        }, false);
+    }, false);</script></li>
+        <li>São necessários alguns cuidados na utilização do <em lang="en">JavaScript</em> na Web pois algumas modificações podem não ser detetadas por alguns leitores de ecrã.</li>
+    </ul>
+</article>
+<article id="lang-attribute" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Dicas práticas: Definições de idioma</span></h2>
+    <ul>
+        <li>O atributo <code lang="en">lang</code> define qual o idioma em que o conteúdo da <em lang="en">tag</em> que o define está escrito.</li>
+        <li>Os leitores de ecrã podem utilizar esta informação para escolher a voz que devem utilizar na leitura. Por outro lado os motores de pesquisa podem utilizar esta informação para indexar o <em lang="en">site</em> no idioma definido.</li>
+    </ul>
+    <code title="Código HTML para a definição de idiomas" class="code prettyprint lang-html">&lt;html lang="pt-PT"&gt;&lt;!-- Define o idioma do documento para Português --&gt; (...)
+&lt;span lang="en"&gt;Web&lt;/span&gt;&lt;!-- A palavra "Web" está em Inglês --&gt;</code>
+</article>
+<article id="page-titles" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Títulos das páginas</span></h2>
+    <ul>
+        <li>Os títulos das páginas devem ser úteis.<p><img title="O que não se deve fazer" src="images/sh3.png" alt="Imagem de vários separadores de um site cujo o título é igual em todas as páginas" /></p></li>
+        <li>Uma boa prática é inverter a ordem do título mostrando primeiro o título da página seguido do nome do <em lang="en">site</em>.<p><img title="Um exemplo" src="images/sh4.png" alt="Imagem de vários separadores de um site cujo o título é diferente para cada uma das páginas" /></p></li>
+    </ul>
+</article>
+<article id="headings" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Cabeçalhos</span></h2>
+    <ul>
+        <li>Os cabeçalhos devem ser utilizados para <strong>títulos</strong>.</li>
+        <li>Cada documento deve ter uma <strong>estrutura lógica de cabeçalhos</strong> que começa no nível 1 e não salta níveis.</li>
+        <li><strong>O título</strong> do conteúdo principal do documento deve ser um <strong>cabeçalho de nível 1</strong>.</li>
+    </ul>
+    <code title="Código HTML com um exemplo de uma estrutura lógica de cabeçalhos" class="code prettyprint lang-html">&lt;h1&gt;Nome do site&lt;/h1&gt;
+    &lt;h2 class="list-title"&gt;Menu principal&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;
+    &lt;div id="content"&gt;
+        &lt;h1&gt;Título da página&lt;/h1&gt;
+        &lt;p&gt;Conteúdo da página&lt;/p&gt;
+    &lt;/div&gt;</code>
+</article>
+<article id="enlarge-your-fonts" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Aumente o tamanho da letra</span></h2>
+    <ul>
+        <li>É recomendado um tamanho de, pelo menos, <strong>16px</strong> efetivos.</li>
+        <li>O texto deve ser legível a um metro do ecrã.</li>
+        <li>Utilize tamanhos relativos<sup class="footnote-reference"><a title="Siga a hiperligação para ler a nota" href="#attention-to-relative-font-sizes">1</a></sup><code title="Código CSS para definição de tamanhos relativos" class="code prettyprint lang-css">html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6em; /* aproximadamente 16px */
+}</code></li>
+    </ul>
+    <div id="attention-to-relative-font-sizes" class="footnote"><a title="Siga a hiperligação para ver um exemplo" href="#relative-text-sizes"><sup class="footnote-reference">1</sup>Atenção à herança de tamanhos</a></div>
+</article>
+
+<article id="relative-text-sizes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Herança de tamanhos</span></h2>
+    <p class="example-label">Atenção à herança de tamanhos!</p>
+    <code title="Código CSS com a representação da herança de tamanhos" class="code prettyprint lang-css">body {
+    font-size: 1.6em; /* &plusmn;16px */
+}
+h1 {
+    font-size: 2em; /* 1.6em*2em&cong;<span class="nocode"><strong>3.2em</strong></span> (32px e não 20px) */
+}</code>
+</article>
+<article id="text-spacing" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Espaçamento do texto</span></h2>
+    <p class="example-label">A falta de espaço entre linhas pode dificultar a leitura de textos longos:</p>
+    <code title="Código CSS para a definição de um espaçamento normal entre linhas" class="code prettyprint lang-css">line-height: normal;</code>
+    <p class="example-label">Resultado:</p>
+    <div style="line-height: 1em;" lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed metus justo, id sagittis neque. Donec neque quam, consequat sit amet tincidunt in, semper id est. Integer sed odio ac metus accumsan rutrum elementum et tortor. Proin suscipit condimentum feugiat. Vestibulum placerat, justo sit amet dapibus fringilla, nisi diam laoreet diam, in ullamcorper arcu neque id mi.</div>
+</article>
+
+
+<article id="text-spacing-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Espaçamento do texto (2)</span></h2>
+    <p class="example-label">Um espaçamento adequado facilita a transição entre linhas:</p>
+    <code title="Código CSS para a definição de um espaçamento de 1.4em entre linhas" class="code prettyprint lang-css">line-height: 1.4em;</code>
+    <p class="example-label">Resultado:</p>
+    <div style="line-height: 1.4em;" lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed metus justo, id sagittis neque. Donec neque quam, consequat sit amet tincidunt in, semper id est. Integer sed odio ac metus accumsan rutrum elementum et tortor. Proin suscipit condimentum feugiat. Vestibulum placerat, justo sit amet dapibus fringilla, nisi diam laoreet diam, in ullamcorper arcu neque id mi.</div>
+</article>
+
+
+<article id="text-spacing-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Espaçamento entre parágrafos</span></h2>
+    <p class="example-label">O espaçamento entre parágrafos também é importante:</p>
+    <code title="Código CSS para definição de parágrafos sem margens" class="code prettyprint lang-css">p{ margin-bottom: 0; }</code>
+    <p class="example-label">Resultado:</p>
+    <div style="line-height: 1.4em;" lang="la">
+        <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed metus justo, id sagittis neque. Donec neque quam, consequat sit amet tincidunt in, semper id est. </p>
+        <p style="margin: 0;">Integer sed odio ac metus accumsan rutrum elementum et tortor. Proin suscipit condimentum feugiat. Vestibulum placerat, justo sit amet dapibus fringilla, nisi diam laoreet diam, in ullamcorper arcu neque id mi.</p></div>
+</article>
+
+
+<article id="text-spacing-4" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Espaçamento entre parágrafos</span></h2>
+    <p class="example-label">O espaçamento facilita a diferenciação de parágrafos:</p>
+    <code title="Código CSS para definição de uma margem inferior de 0.5em" class="code prettyprint lang-css">p{ margin-bottom: 0.5em; }</code>
+    <p class="example-label">Resultado:</p>
+    <div style="line-height: 1.4em;" lang="la">
+        <p style="margin-bottom: 0.5em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed metus justo, id sagittis neque. Donec neque quam, consequat sit amet tincidunt in, semper id est. </p>
+        <p style="margin-bottom: 0.5em;">Integer sed odio ac metus accumsan rutrum elementum et tortor. Proin suscipit condimentum feugiat. Vestibulum placerat, justo sit amet dapibus fringilla, nisi diam laoreet diam, in ullamcorper arcu neque id mi.</p></div>
+</article>
+
+
+<article id="text-alignment" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alinhamento do texto</span></h2>
+    <ul>
+        <li><strong>O alinhamento</strong> de textos longos para idiomas em que a leitura se faça da esquerda para direita deve ser <strong>à esquerda</strong>.</li>
+        <li><strong>Texto justificado</strong> tende a deixar um espaçamento maior entre palavras o que <strong>pode dificultar a leitura</strong> para alguns utilizadores (nomeadamente, pessoas com dislexia ou baixa visão).</li>
+        <li>A hifenização e espaçamento de letras nas palavras poderá permitir que, no futuro, se possa justificar o texto na <em lang="en">web</em> (<abbr title="Cascading Style Sheet">CSS</abbr> 3).</li>
+    </ul>
+</article>
+<article id="links-without-content" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações sem conteúdo</span></h2>
+    <ul>
+        <li>As hiperligações devem ter sempre conteúdo (não basta apenas definir o endereço de destino)
+            <code title="Código HTML com texto desadequado para as hiperligações" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/"&gt;&lt;/a&gt;&lt;!-- Errado!  --&gt;
+&lt;a href="http://exemplo.com/"&gt;&lt;img src="imagem.png" alt=""&gt;&lt;/a&gt;&lt;!-- Errado!  --&gt;</code></li>
+        <li>O texto é importante para dar um contexto à hiperligação<code title="Código HTML com hiperligações com contexto" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/"&gt;Texto&lt;/a&gt;&lt;!-- Melhor  --&gt;
+&lt;a href="http://exemplo.com/"&gt;&lt;img src="imagem.png" alt="Texto"&gt;&lt;/a&gt;&lt;!-- Melhor  --&gt;</code></li>
+    </ul>
+</article>
+
+
+<article id="links-text" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Texto das hiperligações</span></h2>
+    <ul>
+        <li>O texto das hiperligações não deve ser repetido no mesmo documento.</li>
+        <li>Textos genéricos, que não fornecem informação de contexto sobre a hiperligação, não são adequados: 
+            <code title="Código HTML com uma hiperligação com texto genérico" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/documentoxpto.pdf"&gt;Clique aqui&lt;/a&gt; para descarregar o documento XPTO.&lt;!-- Errado!  --&gt;</code></li>
+        <li>Expressões como "clique aqui" são desaconselhadas (existem utilizadores que não "clicam").</li>
+    </ul>
+</article>
+
+
+<article id="example-link" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternativa ao exemplo anterior</span></h2>
+    <code title="Código HTML com uma hiperligação com texto mais completo" class="code prettyprint lang-html">&lt;a target="_blank" title="Siga a hiperligação para aceder ao documento XPTO em uma nova janela ou separador" href="http://exemplo.com/documentoxpto.pdf"&gt;Descarregue documento XPTO (&lt;abbr lang="en" title="Portable Document Format"&gt;PDF&lt;/abbr&gt;)&lt;/a&gt;.</code>
+    <ul>
+        <li>Caso se aplique, é recomendável informar o utilizador que o destino da hiperligação será apresentado numa nova janela/separador.</li>
+        <li>É ainda aconselhável indicar o tipo de documento associado à hiperligação (caso este não seja uma página <abbr lang="en" title="HyperText Markup Language">HTML</abbr>).</li>
+    </ul>
+</article>
+<article id="javascript-links" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações <em lang="en">JavaScript</em></span></h2>
+    <ul>
+        <li>Hiperligações com iteração devem sempre ter o atributo <code>href</code> definido.</li>
+        <li>Isto é importante para garantir que as mesmas podem ser ativadas através de outros métodos que não apenas o clique ou o toque.</li>
+    </ul>
+    <code title="Código HTML com duas hiperligações. A primeira não contém o atributo href, ao contrário da segunda" class="code prettyprint lang-html">&lt;a id="close" title="Fechar elemento"&gt;Fechar&lt;/a&gt;&lt;!-- Errado!  --&gt;
+&lt;a href="#" id="close" title="Fechar elemento"&gt;Fechar&lt;/a&gt;&lt;!-- OK  --&gt;</code>
+</article>
+<article id="skip-links" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações de salto</span></h2>
+    <ul>
+        <li>Nem todos os utilizadores utilizam um rato ou uma superfície tátil para navegar num <em lang="en">site</em>.</li>
+        <li>As hiperligações de salto fornecem um mecanismo para que um utilizador possa ter <strong>acesso facilitado ao conteúdo ou saltar grandes blocos de informação</strong>.</li>
+        <li>É particularmente útil para utilizadores que navegam com o teclado (por exemplo, utilização da tecla <kbd>Tabulação</kbd>) ou com outros dispositivos de mudança de foco passo a passo.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Hiperligações de salto (2)</span></h2>
+    <ul>
+        <li>As hiperligações de salto não são mais do que do que hiperligações normais cujo o destino são âncoras para identificadores existentes na página.
+            <code title="Código HTML com um exemplo de uma hiperligação de salto" class="code prettyprint lang-html">&lt;a href="#content" title="Siga a hiperligação para saltar para o conteúdo da página" class="skip-link"&gt;Ir para o conteúdo&lt;/a&gt;
+&lt;!-- HTML para banners, menus, etc --&gt;
+&lt;div id="content"&gt;&lt;!-- Conteúdo... --&gt;&lt;/div&gt;</code></li>
+        <li><a href="http://www.acessibilidade.gov.pt/w3/TR/WCAG20-TECHS/G1.html" target="_blank" title="Siga a hiperligação para consultar a página de referência">A primeira hiperligação do documento deve apontar diretamente para o conteúdo.</a></li>
+        <li>Hiperligações de salto para grandes blocos de hiperligações são também recomendadas.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto</span></h2>
+    <ul>
+        <li>As hiperligações de salto não devem ser escondidas quando estão ativas<code title="Código CSS não aconselhável para hiperligações de salto" class="code prettyprint lang-css">.skip-link{
+    text-indent: -9999px; /* Errado */
+}
+.skip-link{
+    display: none; /* Muito errado!!! */
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto (2)</span></h2>
+    <ul>
+        <li>As hiperligações de salto podem ser escondidas da área vísivel <strong>apenas</strong> quando não estão ativas<code title="Código CSS para ocultar hiperligações de salto" class="code prettyprint lang-css">a.skip-link,
+a.skip-link:hover,
+a.skip-link:visited{
+    position:absolute;
+    left:0px;
+    top:-1000px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Visibilidade das hiperligações de salto (3)</span></h2>
+    <ul>
+        <li>No entanto estas devem ser apresentadas quando estão em foco (por exemplo, na navegação por teclado)<code title="Código CSS para mostrar hiperligações de salto em foco" class="code prettyprint lang-css">a.skip-link:active,
+a.skip-link:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}</code></li>
+    </ul>
+</article>
+<article id="links-outline" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Limite do foco de hiperligações</span></h2>
+    <ul>
+        <li>O limite (ou linha) que <strong>contorna as hiperligações</strong> quando as mesmas estão focadas não deve ser removido.<code title="Código CSS não aconselhável que remove o limite das hiperligações" class="code prettyprint lang-css">a{
+    outline:none; /* OH, NÃO!!!!! */
+}</code></li>
+        <li>Os utilizadores que apenas utilizam o teclado para navegar necessitam de saber qual a <strong>hiperligação que está selecionada</strong>.</li>
+        <li>Este limite pode ser removido mas <strong>apenas</strong> para o estado <code>:active</code>.</li>
+    </ul>
+</article>
+<article id="menu-links" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Menus</span></h2>
+    <ul>
+        <li>Os menus não são mais do que uma <strong>lista de hiperligações</strong>.</li>
+        <li>Neste sentido as listas não ordenadas do <abbr lang="en" title="HyperText Markup Language">HTML</abbr> fornecem uma solução interessante para representar a estrutura de um menu.</li>
+    </ul>
+    <code title="Código HTML com o exemplo de um menu" class="code prettyprint lang-html">&lt;nav role="navigation"&gt;
+    &lt;h2&gt;Lista com o menu principal do &lt;em lang="en"&gt;site&lt;/em&gt;&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt; (...)
+        &lt;li&gt;&lt;a href="/contactos"&gt;Contactos&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code>
+</article>
+<article id="alternative-navigation-modes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos</span></h2>
+    <ul>
+        <li>Nem todos os utilizadores recorrem ao rato para navegar na <em lang="en">web</em>.</li>
+        <li>É importante garantir que estes utilizadores não são negligenciados, através da <strong>implementação do suporte a métodos de navegação alternativos</strong> tais como navegação com o teclado, ecrãs táteis, etc.</li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos (2)</span></h2>
+    <ul>
+        <li>A execução de ações apenas no <code>:hover</code> é um dos erros mais comuns<code title="Código CSS de execução de ações apenas no evento hover" class="code prettyprint lang-css">a:hover{
+    text-decoration: underline;
+}</code></li><li>Solução: aplicar o mesmo efeito também no <code>:focus</code><code title="Código CSS" class="code prettyprint lang-css">
+a:hover,
+a:focus,
+a:active{
+    text-decoration: underline;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Métodos de navegação alternativos (3)</span></h2>
+    <ul>
+        <li>A utilização de código <em lang="en">JavaScript</em> pode ser útil para adaptar comportamento às caraterísticas da aplicação cliente.</li>
+        <li>Por exemplo, pode modificar-se o comportamento se for detetada a presença de um interface tátil: <code title="Código JavaScript para deteção simples de um interface tátil" class="code prettyprint lang-js">if("ontouchstart" in window){
+/* Interface tátil; definir código para expandir o menu ao toque */
+}else{
+/* Interface não tátil; definir código para expandir o menu ao focar ou deslocar o rato sob o mesmo */
+}</code></li>
+    </ul>
+</article>
+<article id="tables" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Tabelas</span></h2>
+    <ul>
+        <li>As tabelas servem para mostrar informação num formato tabular e <strong>não devem ser utilizadas para definir a estrutura ou <em lang="en">layout</em></strong> de um <em lang="en">site</em>!!!
+            <a href="http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=56ce2fc4-629b-e011-969d-0030487d8897&amp;vsro=8&amp;JSEnabled=1" target="_blank" title="Siga a hiperligação para ver um exemplo do que não se deve fazer">
+                <img alt="Página do Microsoft DreamSpark" src="images/sh2.png"/>
+            </a>
+        </li>
+    </ul>
+</article>
+
+
+<article id="tables-rules" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Título das tabelas</span></h2>
+    <ul>
+        <li>Deve ser definido um <strong><span class="line-through">sumário e </span>título</strong> para a tabela.</li>
+        <li>O <strong>título</strong> é geralmente apresentado ao utilizador e funciona como uma <strong>legenda da tabela</strong>.</li>
+        <li>A utilização do <strong>sumário</strong> através do atributo <code>summary</code> é desaconselhada no <abbr lang="en" title="HyperText Markup Language">HTML</abbr> 5 e a descrição da tabela deve ser feita através do <code>caption</code> ou através de uma <em lang="en">tag</em> <code>figure</code> que englobe a tabela.</li>
+    </ul>
+    <code title="Código HTML com um exemplo de uma tabela com legenda" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por UCs&lt;/caption&gt; (...) 
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="tables-rules-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Estrutura formal das tabelas</span></h2>
+    <ul>
+        <li>É recomendável a definição de uma zona de <strong>cabeçalho</strong> e de <strong>conteúdo</strong> que forneçam informações sobre a estrutura da tabela.</li>
+        <li>Opcionalmente pode ser definido também um <strong>rodapé</strong> que, em conjunto com o cabeçalho, pode ser repetido em caso de quebra de página (na impressão).</li>
+    </ul>
+    <code title="Código HTML com a estrutura formal de uma tabela" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por UCs&lt;/caption&gt;
+    &lt;thead&gt;&lt;!-- Células de cabeçalho (...) --&gt;&lt;/thead&gt;
+    &lt;tfoot&gt;&lt;!-- Células de rodapé (opcional) (...) --&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;&lt;!-- Células de conteúdo (...) --&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-code-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Exemplo de código de uma tabela</span></h2>
+    <code title="Código HTML com o exemplo completo de uma tabela" class="code prettyprint lang-html" style="font-size: 0.5em">&lt;table&gt;
+    &lt;caption&gt;Tabela 1: Avaliações dos alunos por Unidades Curriculares (de 0 a 20 valores)&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;&lt;span title="N&uacute;mero do aluno"&gt;Aluno&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="UC de Qualidade de Servi&ccedil;os em Rede"&gt;QSR&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="UC de Computa&ccedil;&atilde;o em Ambientes Distribu&iacute;dos"&gt;CAD&lt;/span&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120915&lt;/th&gt;
+            &lt;td&gt;19&lt;/td&gt;
+            &lt;td&gt;17&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120917&lt;/th&gt;
+            &lt;td&gt;18&lt;/td&gt;
+            &lt;td&gt;18&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Resultado do exemplo anterior</span></h2>
+    <table>
+        <caption>Tabela 1: Avaliações dos alunos por Unidades Curriculares (de 0 a 20 valores)</caption>
+        <thead>
+            <tr>
+                <th scope="col"><span title="N&uacute;mero do aluno">Aluno</span></th>
+                <th scope="col"><span title="UC de Qualidade de Servi&ccedil;os em Rede">QSR</span></th>
+                <th scope="col"><span title="UC de Computa&ccedil;&atilde;o em Ambientes Distribu&iacute;dos">CAD</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">2120915</th>
+                <td>19</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <th scope="row">2120917</th>
+                <td>18</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+
+
+<article id="tables-more-information" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Mais sobre tabelas</span></h2>
+    <p>Interpretar uma tabela complexa apenas com recurso à audição pode ser algo bastante difícil pelo que se recomenda que as <strong>tabelas</strong> sejam <strong>simplificadas sempre que possível</strong>.</p>
+    <p>Existem mais algumas instruções <abbr lang="en" title="HyperText Markup Language">HTML</abbr> para construção de tabelas mais complexas que não foram abordadas. Em caso de necessidade estas opções adicionais podem e devem ser exploradas para facilitar a interpretação dos dados a apresentar.</p>
+</article>
+
+<article id="images" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Imagens</span></h2>
+    <ul>
+        <li>Devem ter o atributo <code>alt</code> sempre definido. Este atributo <strong>fornece uma alternativa textual</strong> à imagem e pode estar vazio para imagens sem relevância informativa (por exemplo, imagens decorativas).</li>
+        <li>O atributo <code>title</code> fornece informações adicionais sobre a imagem e pode ser utilizado para <strong>descrições curtas</strong> que podem ser consultadas por todos os utilizadores.</li>
+    </ul>
+</article>
+
+
+<article id="background-images" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Imagens (2)</span></h2>
+    <ul>
+        <li>Imagens mais complexas <strong>podem ser descritas contextualmente no conteúdo</strong> ou através da adição de uma hiperligação junto da imagem que remeta para um documento com uma descrição mais completa.</li>
+        <li>No caso das imagens de fundo, deve ser sempre <strong>definida uma cor de fundo</strong> que forneça contraste suficiente para ler o texto (para o caso da imagem não ser apresentada).</li>
+    </ul>
+    <div style="color: #FFFFFF;">Estava aqui um texto...</div>
+</article>
+<article id="color-contrast" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Contraste de cores</span></h2>
+    <ul>
+        <li>O contraste entre as cores de primeiro e de segundo plano do texto devem ser garantido para que a <strong>informação seja legível</strong>.</li>
+        <li>Recomenda-se um rácio de contraste, de pelo menos, 7:1 para textos inferiores a 18pt (ou 14pt no caso de texto negrito) e de, pelo menos, 4.5:1 para textos com dimensões superiores (<a title="Siga a hiperligação para visitar a página de referência" href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast" target="_blank">fórmula de contraste <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0</a>).</li>
+        <li>Ferramentas como o <a href="http://snook.ca/technical/colour_contrast/colour.html" hreflang="en" lang="en" target="_blank" style="font-style: italic;">Colour Contrast Check</a> permitem verificar o rácio de contraste entre duas cores.</li>
+    </ul>
+</article>
+<article id="labels" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Etiquetas</span></h2>
+    <ul>
+        <li>As etiquetas (<code lang="en">labels</code>) permitem adicionar informação descritiva aos campos de um formulário.</li>
+        <li>Estas devem ser associadas de forma implícita ou explícita aos respetivos campos permitindo <strong>aumentar a área de foco</strong>.<code title="Código HTML com um exemplo de associação implicita e explicita de etiquetas a campos" class="code prettyprint lang-html">&lt;label&gt;Nome: &lt;input type="text" /&gt;&lt;/label&gt;&lt;!-- associação implícita --&gt;
+(...)
+&lt;label for="name"&gt;Nome:&lt;/label&gt; &lt;input id="name" type="text" /&gt;&lt;!-- associação explícita --&gt;</code></li>
+    </ul>
+</article>
+<article id="form-grouping" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Agrupamentos em formulários</span></h2>
+    <ul>
+        <li>Os campos de formulários podem ser <strong>agrupados logicamente para simplificar o preenchimento</strong>.<code title="Código HTML com um agrupamento ĺógica de campos de formulário" class="code prettyprint lang-html" style="font-size: 0.68em">&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Dados pessoais: &lt;/legend&gt;
+        &lt;p&gt;&lt;label&gt;Nome: &lt;input type="text" size="30"&gt;&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;label&gt;Email: &lt;input type="text" size="30"&gt;&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;label&gt;Idade: &lt;input type="text" size="3"&gt;&lt;/label&gt;&lt;/p&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</code></li>
+        <li>Geralmente os leitores de ecrã anunciam a legenda antes da etiqueta para cada um dos campos.</li>
+    </ul>
+</article>
+<article id="button-sizes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Tamanho de botões</span></h2>
+    <ul>
+        <li>Elementos interativos devem ter um <strong>tamanho suficiente</strong> para que possam ser utilizados por utilizadores com dificuldades na execução de movimentos precisos.</li>
+    </ul>
+</article>
+<article id="accessibility-enhancements" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Ferramentas de acessibilidade</span></h2>
+    <ul>
+        <li>Ferramentas como uma barra de acessibilidade pode ser uma boa forma de fornecer uma <strong>melhor experiência de navegação</strong> para os utilizadores da vossa aplicação, por exemplo, definindo e controlando a forma como o tamanho do texto pode ser alterado, as cores do <em lang="en">site</em> modificadas, ou através da descrição da estrutura e do funcionamento do vosso <em lang="en">software</em>.
+            <p style="text-align: center; margin-top: 40px;"><a href="http://iact.ipleiria.pt" title="Siga a hiperligação para visitar um site com um exemplo de uma barra de acessibilidade" target="_blank"><img src="images/sh5.png" alt="Exemplo de uma barra de acessibilidade"/></a></p></li>
+    </ul>
+</article>
+<article id="progressive-enhancement-and-graceful-degration" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label"><em lang="en">Progressive Enhancement</em></span></h2>
+    <ul>
+        <li>A aplicação de técnicas de <em lang="en">responsive web design</em> podem permitir <strong>otimizar e melhorar a experiência de navegação</strong> em função das caraterísticas dos utilizadores e respetivos dispositivos de acesso (<em lang="en">progressive enhancement</em>).</li>
+        <li>No entanto, é importante garantir que o acesso à informação continua a ser possível mesmo que as aplicações cliente <strong>não disponham de todas as funcionalidades necessárias</strong> para a melhor experiência possível (<em lang="en">graceful degration</em>).</li>
+    </ul>
+</article>
+<article id="tests-and-validation" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Testes e validação</span></h2>
+    <ul>
+        <li>As ferramentas de validação automática são muito úteis e podem detetar uma boa parte dos <strong>problemas de acessibilidade</strong>. Exemplos:
+            <ul>
+                <li><a hreflang="pt" href="http://www.acessibilidade.gov.pt/accessmonitor/" target="_blank" title="Siga a hiperligação para aceder à ferramenta online"><em lang="en">AccessMonitor</em></a> <small>- desenvolvido pela <a href="http://www.umic.pt" target="_blank" title="Siga a hiperligação para visitar a página da UMIC">UMIC – Agência para a Sociedade do Conhecimento, IP</a></small></li>
+                <li><a hreflang="en" href="http://wave.webaim.org/" target="_blank" title="Siga a hiperligação para aceder à ferramenta online"><em lang="en">WAVE</em></a> <small>- Web Accessibility Tool</small></li>
+            </ul></li>
+        
+        <li>No entanto as <strong>verificações automáticas podem não ser suficientes</strong> para detetar todos os problemas de acessibilidade. Validações manuais, análise ao conteúdo e testes com utilizadores, complementam as análises automáticas.</li>
+    </ul>
+</article>
+<article id="standards" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Algumas normas importantes</span></h2>
+    <ul>
+        <li><a href="http://www.w3.org/TR/WCAG20/" target="_blank"><em lang="en">Web Content Accessibility Guidelines (WCAG) 2.0</em></a></li>
+        <li><a href="http://www.w3.org/TR/wai-aria/" target="_blank"><em lang="en">Accessible Rich Internet Applications (WAI-ARIA) 1.0</em></a></li>
+        <li><a href="http://www.w3.org/TR/html5/" target="_blank"><abbr lang="en" title="HyperText Markup Language">HTML</abbr> 5</a> e <a href="http://www.w3.org/TR/CSS/" target="_blank"><abbr lang="en" title="Cascading Style Sheets">CSS</abbr> 3</a></li>
+    </ul>
+</article>
+<article id="questions" class="step slide" data-x="+1000" data-y="0" data-z="1000" data-rotate-y="-45">
+    <h2 class="title"><span class="label">Questões?</span></h2>
+    <ul>
+        <li>Questões?</li>
+        <li>Dúvidas?</li>
+        <li>Comentários?</li>
+        <li>Conclusões?</li>
+    </ul>
+</article>
+<article id="references" class="step slide" data-x="+1000" data-y="0" data-z="2000" data-rotate-y="-90">
+    <h2 class="title"><span class="label">Referências</span></h2>
+    <ul>
+        <li>G. Ivo, <em lang="en">HTML/CSS tips to improve the accessibility of your websites</em>, Codebits 2011, 10 de novembro de 2011.</li>
+        <li>Inclusão e Acessibilidade em Ação, Inclusão vs. Acessibilidade, Instituto Politécnico de Leiria, 1 de junho de 2012 &lt;<a href="http://iact.ipleiria.pt/concepts/acessibilidade/" target="_blank" title="Siga a hiperligação para consultar esta referência">iact.ipleiria.pt/concepts/acessibilidade/</a>&gt; [Acedido a 3 de maio de 2013]</li>
+        <li><em lang="en">Disabled World</em>, <em lang="en">World Facts and Statistics on Disabilities and Disability Issues</em>, &lt;<a href="http://www.disabled-world.com/disability/statistics/" target="_blank" title="Siga a hiperligação para consultar esta referência">www.disabled-world.com/disability/statistics/</a>&gt; [Acedido a 5 de maio de 2013]</li>
+    </ul>
+</article>
+<article id="source-code" class="step slide" data-x="+0" data-y="1000" data-z="3000" data-rotate-x="0" data-rotate-y="45">
+    <h2 class="title"><span class="label">Source code</span></h2>
+    <ul>
+        <li>GitHub: <a href="https://github.com/cesperanc/accessible-websites-presentation" target="_blank" title="Ligação com o código-fonte da apresentação">https://github.com/cesperanc/accessible-websites-presentation</a></li>
+    </ul>
+</article>
+        </section>
+        <script type="text/javascript">
+        //<![CDATA[
+            var ImpressL10n = {
+                navigationTip : 'Utilize a barra de espaços ou as setas direcionais para navegar',
+                touchNavigationTip : 'Toque à esquerda ou à direita para navegar',
+                manageVisualEffects : 'Ativar/desativar efeitos gráficos',
+                manageVisualEffectsHint : 'Utilize esta hiperligação para desativar ou ativar os efeitos gráficos',
+                enableVisualEffects : 'Ativar os efeitos gráficos',
+                disableVisualEffects : 'Desativar os efeitos gráficos'
+            };
+        //]]>
+        </script>
+        <noscript class="no-print">
+            <div>Não é possível utilizar o JavaScript.</div>
+        </noscript>
+        <script src="assets/js/jumbo.js"></script>
+        <noscript class="no-print">
+            <div>Não é possível utilizar o JavaScript. <strong>A funcionalidade será fortemente reduzida.</strong></div>
+        </noscript>
+    </body>
+</html>
+<!-- 2013-2015, Cláudio Esperança <cesperanc@gmail.com> -->
