@@ -56,7 +56,7 @@ body {
 */
 b, strong { font-weight: bold }
 i, em { font-style: italic }
-    
+
 small{
     font-size: smaller;
     color: #666;
@@ -72,7 +72,7 @@ small{
     width: 900px;
     padding: 40px;
     margin: 20px auto;
-    
+
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
     line-height: 1.5;
@@ -333,53 +333,56 @@ kbd{
     text-decoration: line-through;
 }
 
-
-.rotate-title{
-    margin-top: 150px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2em;
-    line-height: 1.2em;
-
-    /*text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #231F20, 0 0 40px #231F20, 0 0 70px #231F20, 0 0 80px #231F20, 0 0 100px #231F20, 0 0 150px #231F20;*/
-    text-shadow: 0 0 5px #231F20;
-}
-
-.rotate-title .more{
-    display: inline-block;
-}
-
 #title{
     min-height: 700px;
-}
 
-#title .authors{
-    position: absolute;
-    bottom: 120px;
-    text-align: center;
-    width: 780px;
-}
+    .rotate-title{
+        margin-top: 120px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2em;
+        line-height: 1.2em;
 
-#title .authors .name{
-    font-weight: bold;
-}
+        /*text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #231F20, 0 0 40px #231F20, 0 0 70px #231F20, 0 0 80px #231F20, 0 0 100px #231F20, 0 0 150px #231F20;*/
+        text-shadow: 0 0 5px #231F20;
+    }
 
-ul.authors{
-    list-style: none;
-    padding-left: 0;
-}
+    .rotate-title .more{
+        display: inline-block;
+    }
 
-#title .link{
-    position: absolute;
-    bottom: 300px;
-    text-align: center;
-}
+    .link,
+    .authors{
+        width: 780px;
+    }
 
-#title.slide{
-    background-color: transparent;
-    border: 0px none;
-    box-shadow: 0 0 0 transparent;
-    position: relative;
+    .authors{
+        position: absolute;
+        bottom: 120px;
+        text-align: center;
+    }
+
+    .authors .name{
+        font-weight: bold;
+    }
+
+    ul.authors{
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .link{
+        position: absolute;
+        top: 0;
+        text-align: center;
+    }
+
+    &.slide{
+        background-color: transparent;
+        border: 0px none;
+        box-shadow: 0 0 0 transparent;
+        position: relative;
+    }
 }
 
 #global{
@@ -544,7 +547,7 @@ ul.authors{
     .impress-not-supported .fallback-message {
         display: block;
     }
-    
+
     .impress-loading .step{
         opacity: 0;
     }
@@ -578,7 +581,7 @@ ul.authors{
     */
     .impress-enabled .step {
         margin: 0;
-        
+
         opacity: 0.3;
 
         -webkit-transition: opacity 1s;
@@ -586,17 +589,17 @@ ul.authors{
         -ms-transition:     opacity 1s;
         -o-transition:      opacity 1s;
         transition:         opacity 1s;
-        
+
     }
 
     .impress-enabled .step.active { 
         opacity: 1 !important;
         filter: none;
     }
-    
-/*    .impress-enabled .step.past{
-        opacity: 0;
-    }*/
+
+    /*    .impress-enabled .step.past{
+            opacity: 0;
+        }*/
 
     /*
         These 'slide' step styles were heavily inspired by HTML5 Slides:
@@ -626,7 +629,7 @@ ul.authors{
 
 
 
-    
+
     #impress-toolbar{
         position: fixed;
         top: 0;
@@ -637,18 +640,18 @@ ul.authors{
         -o-transition:      opacity 1s;
         transition:         opacity 1s;
     }
-    
+
     .impress-tool{
         opacity: 0;
         margin-left: 0.5em;
         padding: 0.25em;
         display: inline-block;
     }
-    
+
     .impress-tool:first-child{
         margin-left: 0;
     }
-    
+
     .lang-selector.current-lang{
         font-weight: bold;
     }
@@ -658,10 +661,10 @@ ul.authors{
         pointer-events: auto;
         opacity: 1;
     }
-    
-    
+
+
     /* Title frame */
-    
+
     @-webkit-keyframes rotate_title {
         0%   { 
             -webkit-transform: perspective(1000px) rotateY(-10deg);
@@ -688,7 +691,7 @@ ul.authors{
             -o-transform: perspective(1000px) rotateY(10deg); 
         }
     }
-    
+
     @keyframes rotate_title {
         0% {
             transform: perspective(1000px) rotateY(-10deg);
@@ -702,13 +705,13 @@ ul.authors{
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         transform-style: preserve-3d;
-        
+
         /* -webkit-transform: perspective(1000px) rotateY(0deg);
         -moz-transform: perspective(1000px) rotateY(0deg);
         -ms-transform: perspective(1000px) rotateY(0deg);
         -o-transform: perspective(1000px) rotateY(0deg);
         /* transform: perspective(1000px) rotateY(0deg); */
-        
+
         /* -webkit-transition: all 2s ease-in-out;
         -moz-transition: all 2s ease-in-out;
         -o-transition: all 2s ease-in-out;
@@ -722,7 +725,7 @@ ul.authors{
         -o-transform: translateZ(40px);
         transform: translateZ(40px);
     }
-    
+
     .present .rotate-title,
     .past .rotate-title,
     .future .rotate-title{
@@ -917,7 +920,7 @@ ul.authors{
         left: -9000px;
         color: transparent;
     }
-    
+
     .screen-reader-text:focus,
     .screen-reader-text:hover,
     .screen-reader-text:active{
@@ -927,11 +930,11 @@ ul.authors{
         display: inline-block;
         color: #000000;
     }
-    
+
     noscript{
         margin: 20px auto;
         width: 900px;
-    
+
         display: block;
     }
 }
@@ -944,12 +947,12 @@ ul.authors{
     .screen-reader-text{
         display: none;
     }
-    
+
     .slide{
         page-break-after: always;
         height: 100%;
     }
-    
+
     a[target="_blank"]:after,
     a[target="_blank"]:link:after, 
     a[target="_blank"]:visited:after { 
@@ -963,11 +966,11 @@ ul.authors{
         content: "";
         display: none;
     }
-    
+
     a,
     a:not([target="_blank"]){
         color: #231F20;
         text-decoration:none;
     }
-        
+
 }
