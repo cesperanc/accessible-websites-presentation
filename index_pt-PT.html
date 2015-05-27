@@ -7,7 +7,6 @@
         <meta charset="utf-8" />
         <title data-l10n-id="pageTitle">Introdução ao desenvolvimento de sítios web (+) acessíveis</title>
         <meta name="viewport" content="width=1024" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         
         <meta name="description" content="Informações gerais sobre algumas técnicas e recomendações para o desenvolvimento de sítios web mais acessíveis" />
         <meta name="author" content="Cláudio Esperança" />
@@ -31,14 +30,14 @@
             <p>Para uma melhor experiência utilize a última versão do <a href="http://www.google.com/intl/pt-PT/chrome/browser/" target="_blank" title="Siga a hiperligação para visitar a página do Google Chrome">Google Chrome</a>.</p>
         </div>
 
-        <section id="impress">
-<article id="title" class="step slide no-number" data-x="0" data-y="0" data-z="2000" data-rotate-Y="90" data-scale="2">
+        <section id="impress" role="main">
+<div id="title" class="step slide no-number" data-x="0" data-y="0" data-z="2000" data-rotate-Y="90" data-scale="2">
     <h1 class="rotate-title" data-l10n-id="title">Introdução ao desenvolvimento de <span lang="en">sites</span> <span lang="en">web</span> <span class="more">(+)</span> acessíveis</h1>
     <ul class="authors">
         <li><span class="name">Cláudio Esperança &lt;<a href="mailto:cesperanc@gmail.com?subject=Introdução%20ao%20desenvolvimento%20de%20sites%20acessíveis" target="_blank" title="Siga a hiperligação para enviar uma mensagem de correio eletrónico a Cláudio Esperança">cesperanc@gmail.com</a>&gt;</span></li>
     </ul>
     <a class="link" href="https://cesperanc.github.io/daws/">cesperanc.github.io/daws/</a>
-</article>
+</div>
 <article id="index" class="step slide" data-x="2000" data-y="0" data-z="0">
     <h2 class="title"><span class="label">Índice</span></h2>
     <nav>
@@ -115,8 +114,7 @@
 <article id="contextualization" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
     <h2 class="title"><span class="label">Motivação</span></h2>
     <ul>
-        <li>Apresentação no âmbito da unidade curricular de <strong>Seminário</strong> do Mestrado em Engenharia Informática (Computação móvel) da <a href="http://www.estg.ipleiria.pt" target="_blank" title="Siga a hiperligação para visitar a página do Escola Superior de Tecnologia e Gestão de Leiria"><abbr title="Escola Superior de Tecnologia e Gestão de Leiria">ESTG</abbr></a> e do ano do <strong><a href="http://maisinclusivo.ipleiria.pt" target="_blank" title="Siga a hiperligação para visitar a página do IPL (+) Inclusivo">IPL (+) Inclusivo</a></strong>.</li>
-        <li>Desde o dia 8 de fevereiro de 2013 que <strong>todos os <em lang="en">sites</em></strong> que disponibilizam informação ou serviços <em lang="en">online</em> <strong>são obrigados a cumprir</strong>, respetivamente, <strong>os níveis A e AA</strong> das <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 - conjugação da lei que estabelece a adopção de normas abertas (<a href="http://m6.ama.pt/docs/Lei362011-NormasAbertas.pdf" target="_blank" title="Siga a hiperligação para consultar o documento">lei nº 36/2011</a>) e do <abbr title="Regulamento Nacional de Interoperabilidade Digital">RNID</abbr> (<a href="http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf" target="_blank" title="Siga a hiperligação para consultar o documento">RCM nº91/2012</a>).</li>
+        <li>Desde o dia 8 de fevereiro de 2013 que <strong>todos os <em lang="en">sites</em></strong> que disponibilizam informação ou serviços <em lang="en">online</em> <strong>são obrigados a cumprir</strong>, respetivamente, <strong>os níveis A e AA</strong> das <abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 - conjugação da lei que estabelece a adoção de normas abertas (<a href="http://m6.ama.pt/docs/Lei362011-NormasAbertas.pdf" target="_blank" title="Siga a hiperligação para consultar o documento">lei n.º 36/2011</a>) e do <abbr title="Regulamento Nacional de Interoperabilidade Digital">RNID</abbr> (<a href="http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf" target="_blank" title="Siga a hiperligação para consultar o documento"><abbr title="Resolução do Conselho de Ministros">RCM</abbr> n.º91/2012</a>).</li>
     </ul>
     <div class="footer">— <cite><a href="http://www.acessibilidade.gov.pt/" title="Siga a hiperligação para consultar a página de referência desta informação" target="_blank">Unidade ACESSO da FCT</a></cite></div>
 </article>
@@ -136,16 +134,16 @@
         <li>As pessoas com deficiências fazem parte do <strong>maior grupo minoritário do Mundo</strong>.</li>
         <li>Atualmente estima-se que <span title="650 milhões de pessoas" style="font-weight: bold;">10% da população mundial</span> tem algum tipo de deficiência.</li>
         <li><strong>Este número tem tendência a subir</strong> à medida que a população vai envelhecendo.</li>
-        <li>Em países com uma esperança média de vida superior a 70 anos, <strong>as pessoas vivem aproximadamente <span title="8 anos">12% da sua vida</span> com algum tipo de deficiência</strong>.</li>
+        <li>Em países com uma esperança média de vida superior a 70 anos, <strong>as pessoas vivem aproximadamente <span title="8 anos">11.5% da sua vida</span> com algum tipo de deficiência</strong>.</li>
     </ul>
     <div class="footer">— <cite><a href="http://www.disabled-world.com/disability/statistics/" title="Siga a hiperligação para consultar a página de referência desta informação" target="_blank">Disabled World</a></cite></div>
 </article>
 <article id="type-of-disabilities" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
     <h2 class="title"><span class="label">Alguns tipos de deficiência</span></h2>
     <ul>
-        <li>Visão (cegueira, baixa visão, daltonismo, etc)</li>
+        <li>Motora</li>
+        <li>Visão (cegueira, baixa visão, daltonismo, etc.)</li>
         <li>Audição</li>
-        <li>Mobilidade</li>
         <li>Cognitivas</li>
         <li>Etc.</li>
     </ul>
@@ -182,7 +180,7 @@
     <ul>
         <li>O HTML tem uma <strong>sintaxe relativamente simples</strong>. No entanto é importante saber aplicar convenientemente cada uma das suas <em lang="en">tags</em> para obter os resultados mais adequados.</li>
         <li><strong>Cada <em lang="en">tag</em> tem as suas funções e caraterísticas</strong>, fornecendo informações essenciais sobre o conteúdo e respetiva semântica.</li>
-        <li><strong>Aplicações</strong> como <em lang="en">Browsers</em>, indexadores de motores de pesquisa, leitores de ecrã, etc, <strong>baseiam-se nestas instruções para definir o seu comportamento</strong>.</li>
+        <li><strong>Aplicações</strong> como navegadores, indexadores de motores de pesquisa, leitores de ecrã, etc, <strong>baseiam-se nestas instruções para definir o seu comportamento</strong>.</li>
     </ul>
 </article>
 <article id="html-tags" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
@@ -451,6 +449,14 @@ a.skip-link:focus{
 }</code></li>
     </ul>
 </article>
+
+<article id="aria-landmarks" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label" lang="en"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> landmark roles</span></h2>
+    <ul>
+        <li>As hiperligações de salto ainda são bastante utilizadas (promovidas pelas <a href="http://www.w3.org/TR/WCAG20/" target="_blank"><abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0</a>)</li>
+        <li>No entanto as <a href="http://www.w3.org/WAI/PF/aria-practices/#kbd_layout" target="_blank" lang="en"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> landmark roles</a> podem fornecer uma solução mais interessante para <strong>descrever logicamente a estrutura do site/aplicação</strong> e permitir a navegação entre as suas secções com recurso a tecnologias de apoio.</li>
+    </ul>
+</article>
 <article id="links-outline" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
     <h2 class="title"><span class="label">Limite do foco de hiperligações</span></h2>
     <ul>
@@ -674,7 +680,7 @@ a:active{
 <article id="progressive-enhancement-and-graceful-degration" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
     <h2 class="title"><span class="label"><em lang="en">Progressive Enhancement</em></span></h2>
     <ul>
-        <li>A aplicação de técnicas de <em lang="en">responsive web design</em> podem permitir <strong>otimizar e melhorar a experiência de navegação</strong> em função das caraterísticas dos utilizadores e respetivos dispositivos de acesso (<em lang="en">progressive enhancement</em>).</li>
+        <li>O <em lang="en">responsive web design</em> e descrição de elementos com as ferramentas para as <a href="http://www.w3.org/TR/wai-aria/" target="_blank"><abbr lang="en" title="Accessible Rich Internet Applications">ARIA</abbr></a> podem permitir <strong>otimizar e melhorar a experiência de navegação</strong> em função das caraterísticas dos utilizadores e respetivos dispositivos de acesso (<em lang="en">progressive enhancement</em>).</li>
         <li>No entanto, é importante garantir que o acesso à informação continua a ser possível mesmo que as aplicações cliente <strong>não disponham de todas as funcionalidades necessárias</strong> para a melhor experiência possível (<em lang="en">graceful degration</em>).</li>
     </ul>
 </article>
@@ -701,10 +707,8 @@ a:active{
 <article id="questions" class="step slide" data-x="+1000" data-y="0" data-z="1000" data-rotate-y="-45">
     <h2 class="title"><span class="label">Questões?</span></h2>
     <ul>
-        <li>Questões?</li>
         <li>Dúvidas?</li>
         <li>Comentários?</li>
-        <li>Conclusões?</li>
     </ul>
 </article>
 <article id="references" class="step slide" data-x="+1000" data-y="0" data-z="2000" data-rotate-y="-90">
@@ -712,10 +716,18 @@ a:active{
     <ul>
         <li>G. Ivo, <em lang="en">HTML/CSS tips to improve the accessibility of your websites</em>, Codebits 2011, 10 de novembro de 2011.</li>
         <li>Inclusão e Acessibilidade em Ação, Inclusão vs. Acessibilidade, Instituto Politécnico de Leiria, 1 de junho de 2012 &lt;<a href="http://iact.ipleiria.pt/concepts/acessibilidade/" target="_blank" title="Siga a hiperligação para consultar esta referência">iact.ipleiria.pt/concepts/acessibilidade/</a>&gt; [Acedido a 3 de maio de 2013]</li>
-        <li><em lang="en">Disabled World</em>, <em lang="en">World Facts and Statistics on Disabilities and Disability Issues</em>, &lt;<a href="http://www.disabled-world.com/disability/statistics/" target="_blank" title="Siga a hiperligação para consultar esta referência">www.disabled-world.com/disability/statistics/</a>&gt; [Acedido a 5 de maio de 2013]</li>
+        <li><em lang="en">Disabled World</em>, <em lang="en">World Facts and Statistics on Disabilities and Disability Issues</em>, &lt;<a href="http://www.disabled-world.com/disability/statistics/" target="_blank" title="Siga a hiperligação para consultar esta referência">www.disabled-world.com/disability/statistics/</a>&gt; [Acedido a 27 de maio de 2015]</li>
     </ul>
 </article>
-<article id="source-code" class="step slide" data-x="+0" data-y="1000" data-z="3000" data-rotate-x="0" data-rotate-y="45">
+
+<article id="references-2" class="step slide" data-x="+0" data-y="0" data-z="+1000" data-rotate-y="-90">
+    <h2 class="title"><span class="label">Referências (2)</span></h2>
+    <ul>
+        <li><em lang="en">Windows Dev Center, Introduction to ARIA</em>, Microsoft, &lt;<a href="https://msdn.microsoft.com/en-us/windows/gg671918" target="_blank" title="Siga a hiperligação para consultar esta referência">msdn.microsoft.com/en-us/windows/gg671918</a>&gt; [Acedido a 27 de maio de 2015]</li>
+        <li><em lang="en">J. Craig & M. Cooper, Accessible Rich Internet Applications (WAI-ARIA) 1.0</em>, W3C, 3 de fevereiro de 2014 &lt;<a href="http://www.w3.org/WAI/PF/aria/" target="_blank" title="Siga a hiperligação para consultar esta referência">www.w3.org/WAI/PF/aria/</a>&gt; [Acedido a 27 de maio de 2015]</li>
+    </ul>
+</article>
+<article id="source-code" class="step slide" data-x="+0" data-y="1000" data-z="+1000" data-rotate-x="0" data-rotate-y="45">
     <h2 class="title"><span class="label">Source code</span></h2>
     <ul>
         <li>GitHub: <a href="https://github.com/cesperanc/daws" target="_blank" title="Ligação com o código-fonte da apresentação">https://github.com/cesperanc/daws</a></li>
@@ -736,7 +748,7 @@ a:active{
         //]]>
         </script>
         <noscript class="no-print">
-            <div>Não é possível utilizar o JavaScript.</div>
+            <div class="screen-reader-text">Não é possível utilizar o JavaScript.</div>
         </noscript>
         <script src="assets/js/jumbo.js"></script>
         <noscript class="no-print">

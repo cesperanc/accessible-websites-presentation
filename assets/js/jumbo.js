@@ -997,9 +997,11 @@ if (window.matchMedia && window.matchMedia('screen')) {
             if (ImpressCookie.effectsEnabled()) {
                 document.getElementById("change-effects").innerHTML = ImpressL10n.disableVisualEffects;
                 document.body.classList.add("impress-effects-enabled");
+                document.body.setAttribute("role", "application");
             } else {
                 document.getElementById("change-effects").innerHTML = ImpressL10n.enableVisualEffects;
                 document.body.classList.add("impress-effects-disabled");
+                document.body.setAttribute("role", "document");
             }
             if (ImpressCookie.printEnabled()) {
                 ImpressCookie.disablePrint();
