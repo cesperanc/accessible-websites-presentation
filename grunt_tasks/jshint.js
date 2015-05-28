@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         },
         build: {
             files: {
-                src: ['**/*.dev.js']
+                src: ['src/**/*.dev.js']
             }
         },
         from_watch: {

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         },
         build: {
             expand: true,
-            src: ['**/*.dev.js', '!*.min.js'],
+            src: ['src/**/*.dev.js', '!*.min.js'],
             ext: '.min.js'
         },
         from_watch: {

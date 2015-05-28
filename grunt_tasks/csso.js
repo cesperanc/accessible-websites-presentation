@@ -5,7 +5,7 @@ module.exports = function(grunt) {
                 report: 'min'
             },
             files: {
-                'assets/css/styles.css': 'assets/css/styles.css'
+                'dist/assets/css/styles.css': 'dist/assets/css/styles.css'
             }
         }
     });

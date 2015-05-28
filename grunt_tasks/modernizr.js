@@ -1,8 +1,8 @@
 module.exports = function (grunt) {
     grunt.config('modernizr', {
         build: {
-            "devFile": "assets/vendor/modernizr/",
-            "outputFile": "assets/vendor/modernizr/modernizr.min.js",
+            "devFile": "vendor/modernizr/modernizr-dev.js",
+            "outputFile": "dist/assets/vendor/modernizr/modernizr.min.js",
             "extra": {
                 "shiv": true,
                 "printshiv": false,
@@ -24,6 +24,14 @@ module.exports = function (grunt) {
             "uglify": true,
             "tests": [],
             "parseFiles": true,
+            "files" : {
+                "src": [
+                    "src/**/*.js",
+                    "!src/**/*.dev.js",
+                    'src/**/*.{scss,sass}',
+                    'src/**/*.css'
+                ]
+            },
             "matchCommunityTests": false,
             "customTests": []
         }

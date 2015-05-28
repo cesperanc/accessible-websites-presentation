@@ -2,16 +2,16 @@ module.exports = function(grunt) {
     grunt.config('compass', {
         build: {
             options: {
-                sassDir: 'assets/css/scss',
-                cssDir: 'assets/css',
+                sassDir: 'src/assets/css/scss',
+                cssDir: 'dist/assets/css',
                 outputStyle: 'compressed',
                 environment: 'production'
             }
         },
         from_watch: {
             options: {
-                sassDir: 'assets/css/scss',
-                cssDir: 'assets/css',
+                sassDir: 'src/assets/css/scss',
+                cssDir: 'dist/assets/css',
                 environment: 'development'
             }
         }

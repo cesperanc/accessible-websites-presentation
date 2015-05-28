@@ -6,27 +6,27 @@ module.exports = function (grunt) {
         },
         build: {
             files: {
-                'assets/js/jumbo.js': [
-                    'assets/vendor/google-code-prettify/prettify.js',
-                    'assets/vendor/google-code-prettify/lang-css.js',
-                    'assets/js/impress/impress.min.js',
-                    'assets/js/impress/impress-init.min.js'
+                'dist/assets/js/jumbo.js': [
+                    'vendor/google-code-prettify/prettify.js',
+                    'vendor/google-code-prettify/lang-css.js',
+                    'src/assets/js/impress/impress.min.js',
+                    'src/assets/js/impress/impress-init.min.js'
                 ]
-                        //,'index.html': ['html/layout/header.html', 'html/slides/*/*.html', 'html/layout/footer.html']
+                //,'dist/index.html': ['src/html/layout/header.html', 'src/html/slides/*/*.html', 'src/html/layout/footer.html']
             }
         },
         from_watch_html: {
             files: {
-                'index.html': ['html/layout/header.html', 'html/slides/*/*.html', 'html/layout/footer.html']
+                'dist/index.html': ['src/html/layout/header.html', 'src/html/slides/*/*.html', 'src/html/layout/footer.html']
             }
         },
         from_watch_js: {
             files: {
-                'assets/js/jumbo.js': [
-                    'assets/vendor/google-code-prettify/prettify.js',
-                    'assets/vendor/google-code-prettify/lang-css.js',
-                    'assets/js/impress/impress.dev.js',
-                    'assets/js/impress/impress-init.dev.js'
+                'dist/assets/js/jumbo.js': [
+                    'vendor/google-code-prettify/prettify.js',
+                    'vendor/google-code-prettify/lang-css.js',
+                    'src/assets/js/impress/impress.dev.js',
+                    'src/assets/js/impress/impress-init.dev.js'
                 ]
             }
         }

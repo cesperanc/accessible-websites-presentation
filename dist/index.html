@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title data-l10n-id="pageTitle">Introduction to the development of (+) accessible websites</title>
+        <meta name="viewport" content="width=1024" />
+        
+        <meta name="description" content="General information about some techniques and recommendations for the development of more accessible websites" />
+        <meta name="author" content="Cláudio Esperança" />
+
+        <link href="assets/css/styles.css" rel="stylesheet"/>
+
+        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+        <script src="assets/vendor/modernizr/modernizr.min.js"></script>
+         
+    </head>
+
+    <body class="impress-loading">
+        <a class="screen-reader-text no-print" href="#index" title="Follow the link to go the beginning of the document">Go to the beginning</a>
+
+        <div class="fallback-message no-print">
+            <p>Your browser <strong>does not support</strong> all the functionalities required for this presentation.</p>
+            <p>To a better experience please use the last version of <a href="http://www.google.com/intl/en-US/chrome/browser/" target="_blank" title="Visit the Google Chrome download page">Google Chrome</a>.</p>
+        </div>
+
+        <section id="impress" role="main">
+<div id="title" class="step slide no-number" data-x="0" data-y="0" data-z="2000" data-rotate-Y="90" data-scale="2">
+    <h1 class="rotate-title" data-l10n-id="title">Development of <span class="more">(+)</span> accessible web sites</h1>
+    <ul class="authors">
+        <li><span class="name">Cl&aacute;udio Esperan&ccedil;a &lt;<a href="mailto:cesperanc@gmail.com?subject=Introduction%20to%20the%development%20of%20accessible%20web%20sites" target="_blank" title="Send an email to Cláudio Esperança">cesperanc@gmail.com</a>&gt;</span></li>
+    </ul>
+    <a class="link" href="https://cesperanc.github.io/daws/">cesperanc.github.io/daws/</a>
+</div>
+<article id="index" class="step slide" data-x="2000" data-y="0" data-z="0">
+    <h2 class="title"><span class="label">Agenda</span></h2>
+    <nav>
+        <ul>
+            <li><a href="#contextualization">Motivation</a></li>
+            <li><a href="#definition">Accessibility definition</a></li>
+            <li><a href="#users-with-disabilities">Users with disabilities</a></li>
+            <li><a href="#type-of-disabilities">Disability types</a></li>
+            <li><a href="#accessibility-as-a-tool">Accessibility as a tool</a></li>
+            <li><a href="#acting-areas">Field of action</a></li>
+            <li><a href="#web-pages">Web pages</a>: <a href="#html"><abbr title="HyperText Markup Language">HTML</abbr></a>, <a href="#css"><abbr title="Cascading Style Sheets">CSS</abbr></a> and <a href="#javascript"><em lang="en">JavaScript</em></a></li>
+            <li class="no-print"><a href="#index-2"><small>(continues on slide 2...)</small></a></li>
+        </ul>
+    </nav>
+</article>
+<article id="index-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Agenda (2)</span></h2>
+    <nav>
+        <ul>
+            <li>Practical tips:
+                <ul>
+                    <li><a href="#lang-attribute">Language definition</a></li>
+                    <li><a href="#page-titles">Page titles</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#enlarge-your-fonts">Font size</a></li>
+                    <li><a href="#text-spacing">Text spacing and alignment</a></li>
+                    <li><a href="#links-without-content">Links</a></li>
+
+                    <li class="no-print"><a href="#index-3"><small>(continues on slide 3...)</small></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</article>
+<article id="index-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Agenda (3)</span></h2>
+    <nav>
+        <ul>
+            <li>Practical tips (continuation):
+                <ul>
+                    <li><a href="#skip-links">Skip links</a></li>
+                    <li><a href="#links-outline">Link focus outline</a></li>
+                    <li><a href="#menu-links">Menus</a></li>
+                    <li><a href="#alternative-navigation-modes">Alternative navigation methods</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#images">Images</a></li>
+                    <li class="no-print"><a href="#index-4"><small>(continues on slide 4...)</small></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</article>
+<article id="index-4" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Agenda (4)</span></h2>
+    <nav>
+        <ul>
+            <li>Practical tips (continuation):
+                <ul>
+                    <li><a href="#color-contrast">Color contrast</a></li>
+                    <li><a href="#labels">Labels for form fields</a></li>
+                    <li><a href="#form-grouping">Grouping in forms</a></li>
+                    <li><a href="#button-sizes">Buttons size</a></li>
+                </ul>
+            </li>
+            <li><a href="#accessibility-enhancements">Accessibility tools</a></li>
+            <li><a href="#progressive-enhancement-and-graceful-degration">Progressive Enhancement and Graceful Degradation</a></li>
+            <li><a href="#tests-and-validation">Tests and validation</a></li>
+            <li><a href="#standards">Some important standards</a></li>
+        </ul>
+    </nav>
+</article>
+<article id="contextualization" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Motivation</span></h2>
+    <ul>
+        <li>Since February 8, 2013 that <strong>all the sites</strong> which provide online information or services in Portugal <strong>are obliged to meet</strong>, respectively, <strong>the levels A and AA</strong> from the <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0 - conjunction of the law establishing the adoption of open standards (<a hreflang="pt-PT" href="http://m6.ama.pt/docs/Lei362011-NormasAbertas.pdf" target="_blank" title="View the document">law #36/2011</a>) and the <abbr lang="pt-PT" title="Regulamento Nacional de Interoperabilidade Digital">RNID</abbr> (<a href="http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf" target="_blank" title="View the document"><abbr title="Resolução do Conselho de Ministros">RCM</abbr> #91/2012</a>).</li>
+    </ul>
+    <div class="footer">— <cite><a hreflang="pt-PT" href="http://www.acessibilidade.gov.pt/" title="Follow the link to view the reference" target="_blank">ACCESS Unit of FCT</a></cite></div>
+</article>
+<article id="definition" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Accessibility definition</span></h2>
+    <blockquote cite="http://iact.ipleiria.pt/concepts/acessibilidade/">
+        <dl>
+            <dt>Accessibility</dt>
+            <dd>relates to the means and resources that enhance the skills of those who use them, <strong>reducing the effect of existing barriers.</strong></dd>
+        </dl>
+        <footer>— <cite><a hreflang="pt-PT" href="http://iact.ipleiria.pt/concepts/acessibilidade/" title="View the reference" target="_blank"><abbr lang="pt-PT" title="Inclusão e Acessibilidade em Ação">iACT</abbr></a></cite></footer>
+    </blockquote>
+</article>
+<article id="users-with-disabilities" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Users with disabilities</span></h2>
+    <ul>
+        <li>People with disabilities are part of the <strong>World's largest minority group</strong>.</li>
+        <li>Currently it is estimated that <span title="650 million people" style="font-weight: bold;">10% of the Worlds's population</span> has some type of disability.</li>
+        <li><strong>This number has the tendency to grow</strong> as the population ages.</li>
+        <li>In countries with life expectancy higher than 70 years, <strong>people live about <span title="8 years">11.5% of their life</span> with some kind of disability</strong>.</li>
+    </ul>
+    <div class="footer">— <cite><a href="http://www.disabled-world.com/disability/statistics/" title="View the reference" target="_blank">Disabled World</a></cite></div>
+</article>
+<article id="type-of-disabilities" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Disability types</span></h2>
+    <ul>
+        <li>Physical disabilities</li>
+        <li>Sight (blindness, low vision, color blindness, etc.)</li>
+        <li>Hearing disabilities</li>
+        <li>Cognitive disabilities</li>
+        <li>Etc.</li>
+    </ul>
+</article>
+<article id="accessibility-as-a-tool" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Accessibility as a tool</span></h2>
+    <ul>
+        <li><strong>Concerns about the accessibility tend to improve the quality of software and their content</strong>.</li>
+        <li>However, by solving accessibility problems to some users, we <strong>should not create problems for the remaining users</strong>.</li>
+        <li>Additional features may be provided to enhance the experience of some users, but the solution as a whole <strong>should not differentiate users</strong>.</li>
+    </ul>
+</article>
+<article id="acting-areas" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Field of action</span></h2>
+    <ul>
+        <li>Web site (or application) layout</li>
+        <li>Contents (like text, images or video)</li>
+        <li>Forms (and other interactive elements)</li>
+    </ul>
+</article>
+<article id="web-pages" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Web pages</span></h2>
+    <p>
+        Web pages are usually built in three languages:
+    </p>
+    <ul>
+        <li><strong><abbr title="HyperText Markup Language">HTML</abbr></strong> as the core language to <strong>represent contents</strong>. It also refers others resources it needs to present the information correctly.</li>
+        <li><strong><abbr title="Cascading Style Sheets">CSS</abbr></strong> as a support language with instructions about the <strong>visual aspect</strong> of <abbr title="HyperText Markup Language">HTML</abbr> elements.</li>
+        <li><strong><em lang="en">JavaScript</em></strong> as a support language to define <strong>behaviours and functional aspects </strong> of <abbr title="HyperText Markup Language">HTML</abbr> elements.</li>
+    </ul>
+</article>
+<article id="html" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><abbr title="HyperText Markup Language">HTML</abbr></span></h2>
+    <ul>
+        <li>HTML has a <strong>relatively simple syntax</strong>. However it is important to know how to properly apply each of its tags to obtain the most adequate results.</li>
+        <li><strong>Each tag as their own function and characteristics</strong>, providing essential information about the content and its semantics.</li>
+        <li><strong>Applications</strong> like browsers, search engines crawlers, screen readers, etc., <strong>use this information to define their behaviour</strong>.</li>
+    </ul>
+</article>
+<article id="html-tags" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><abbr title="HyperText Markup Language">HTML</abbr> tags</span></h2>
+    <p>A <abbr title="HyperText Markup Language">HTML</abbr> tag is formed with elements like the name (required), attributes (optional) and a value (optional)</p>
+    <p><img src="assets/images/tags-en.png" alt="Image with a representation of the following HTML: &lt;label for=&quot;test&quot;&gt;Test label:&lt;/label&gt;&lt;input id=&quot;test&quot; /&gt;" style="margin-top: 20px;"/></p>
+</article>
+<article id="html-structure" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Formal structure of a Web page</span></h2>
+    <p>A Web page is made by a document type specification, a header and a body.</p>
+    <code title="HTML code with the formal structure of a HTML Web page" class="code prettyprint lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Page content
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+</article>
+
+<article id="html-structure-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Formal structure of a Web page (2)</span></h2>
+    <ul>
+        <li>The <code lang="en">doctype</code> defines the type and version of the specification which should be used to process the document.</li>
+        <li>In the page header (enclosed by the <code lang="en">head</code> <em lang="en">tag</em>) usually we can find the meta-data that characterize the page, as well the reference to other resources required for the page layout and functionality (for instance, <abbr title="Cascading Style Sheet">CSS</abbr> files).</li>
+        <li>In the page body (enclosed by the <code lang="en">body</code> <em lang="en">tag</em>) are the actual contents of the page (like texts, images, videos, etc).</li>
+    </ul>
+</article>
+<article id="css" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Cascading Style Sheet (CSS)</span></h2>
+    <ul>
+        <li>Style sheets <strong>define the appearance</strong> which the content should have.</li>
+        <li>Instructions with the specification of size, color, spacing, etc., must be defined through this language, thus promoting the <strong>separation between presentation and content</strong>.</li>
+        <li>The style information handle essentially the visual aspects of a page and <strong>usually it is ignored by screen readers</strong> (with some exceptions).</li>
+    </ul>
+</article>
+
+<article id="css-example" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Example with some <abbr title="Cascading Style Sheet">CSS</abbr> instructions</span></h2>
+    <p>The following example present a set of <abbr title="Cascading Style Sheet">CSS</abbr> instructions which define the <strong>color red</strong> and a font-weight with the style <strong>bold</strong>, to all <strong>paragraphs</strong> in a <abbr lang="en" title="HyperText Markup Language">HTML</abbr> document.</p>
+    <code title="CSS code with an example of a CSS instruction" class="code prettyprint lang-css">p {
+    color: red;
+    font-weight: bold;
+}</code>
+</article>
+<article id="javascript" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label"><em lang="en">JavaScript</em></span></h2>
+    <ul>
+        <li>This is a programming language used to manipulate, add interaction, define behaviors and to modify aspects of <abbr lang="en" title="HyperText Markup Language">HTML</abbr> elements. 
+            <p class="no-print">Example: </p>
+            <div class="no-print" style="text-align: right;"><input id="javascript-example-btn" type="button" value="Activate this button"/></div><code title="Code to send an alert with JavaScript" class="code prettyprint lang-js" style="font-size: 0.65em;">document.getElementById("javascript-example-btn")
+.addEventListener("click", function () { alert("You have activated the button!"); }, false);</code>
+    <script>window.addEventListener("load", function () {
+        document.getElementById("javascript-example-btn").addEventListener("click", function () {
+            alert("You have activated the button!");
+        }, false);
+    }, false);</script></li>
+        <li>Some precautions should be taken when using <em lang="en">JavaScript</em> on the Web because some content modifications may not be detected by some screen readers (read <a hreflang="en" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-live" target="_blank">aria-live</a>).</li>
+    </ul>
+</article>
+<article id="lang-attribute" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Practical tips: Language definition</span></h2>
+    <ul>
+        <li>The <code lang="en">lang</code> attribute defines the content language from a given <em lang="en">tag</em> and its descendants (<em lang="en">tags</em>).</li>
+        <li>Screen readers can use this information to choose the voice that they should use when reading the text.</li>
+        <li>Search engines may use this information to index the site in the correct language.</li>
+    </ul>
+    <code title="HTML code to set the language of a document or a tag" class="code prettyprint lang-html" style="font-size: 0.7em;">&lt;html lang="pt-PT"&gt;&lt;!-- Set the document language to Portuguese --&gt; (...)
+&lt;span lang="en"&gt;Web&lt;/span&gt;&lt;!-- The word "Web" is in English--&gt;</code>
+</article>
+<article id="page-titles" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Page titles</span></h2>
+    <ul>
+        <li>Page titles must be useful.<p><img title="What you shouldn't do" src="assets/images/sh3.png" alt="Image from a browser with various tabs of a site whose title is the same on every page" /></p></li>
+        <li>A good practice is to invert the text order from the title showing first the title of the page followed by the site name.<p><img title="An example more user friendly" src="assets/images/sh4.png" alt="Image from a browser with many tabs of a site whose title is different for each page" /></p></li>
+    </ul>
+</article>
+<article id="headings" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="1">
+    <h2 class="title"><span class="label">Headings</span></h2>
+    <ul>
+        <li>Headings must be used for <strong>titles</strong>.</li>
+        <li>Each document should have a <strong>logical heading structure</strong> which starts on level 1 and don't skip levels.</li>
+        <li><strong>The title</strong> of the main content of a document should be a <strong>level 1 heading</strong>.</li>
+    </ul>
+    <code title="HTML code with an example of a logical heading structure" class="code prettyprint lang-html">&lt;h1&gt;Site name&lt;/h1&gt;
+    &lt;h2 class="list-title"&gt;Main menu&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;
+    &lt;div id="content"&gt;
+        &lt;h1&gt;Page title&lt;/h1&gt;
+        &lt;p&gt;Page content&lt;/p&gt;
+    &lt;/div&gt;</code>
+</article>
+<article id="questions" class="step slide" data-x="+1000" data-y="0" data-z="1000" data-rotate-y="-45">
+    <h2 class="title"><span class="label">Questions?</span></h2>
+    <ul>
+        <li>Doubts?</li>
+        <li>Comments?</li>
+    </ul>
+</article>
+<article id="references" class="step slide" data-x="+1000" data-y="0" data-z="2000" data-rotate-y="-90">
+    <h2 class="title"><span class="label">References</span></h2>
+    <ul>
+        <li>G. Ivo, <em lang="en">HTML/CSS tips to improve the accessibility of your websites</em>, Codebits 2011, November 10, 2011.</li>
+        <li>Inclusão e Acessibilidade em Ação, Inclusão vs. Acessibilidade, Instituto Politécnico de Leiria, June 1, 2012 &lt;<a href="http://iact.ipleiria.pt/concepts/acessibilidade/" target="_blank" title="View this reference">iact.ipleiria.pt/concepts/acessibilidade/</a>&gt; [Accessed May 3, 2013]</li>
+        <li><em lang="en">Disabled World</em>, <em lang="en">World Facts and Statistics on Disabilities and Disability Issues</em>, &lt;<a href="http://www.disabled-world.com/disability/statistics/" target="_blank" title="View this reference">www.disabled-world.com/disability/statistics/</a>&gt; [Accessed on May 27, 2015]</li>
+    </ul>
+</article>
+
+<article id="references-2" class="step slide" data-x="+0" data-y="0" data-z="+1000" data-rotate-y="-90">
+    <h2 class="title"><span class="label">References (2)</span></h2>
+    <ul>
+        <li><em lang="en">Windows Dev Center, Introduction to ARIA</em>, Microsoft, &lt;<a href="https://msdn.microsoft.com/en-us/windows/gg671918" target="_blank" title="View this reference">msdn.microsoft.com/en-us/windows/gg671918</a>&gt; [Accessed on May 27, 2015]</li>
+        <li><em lang="en">J. Craig & M. Cooper, Accessible Rich Internet Applications (WAI-ARIA) 1.0</em>, W3C, February 3, 2014 &lt;<a href="http://www.w3.org/WAI/PF/aria/" target="_blank" title="View this reference">www.w3.org/WAI/PF/aria/</a>&gt; [Accessed on May 27, 2015]</li>
+    </ul>
+</article>
+<article id="source-code" class="step slide" data-x="+0" data-y="1000" data-z="+1000" data-rotate-x="0" data-rotate-y="45">
+    <h2 class="title"><span class="label">Source code</span></h2>
+    <ul>
+        <li>You can find the source code of this presentation on GitHub: <a href="https://github.com/cesperanc/daws" target="_blank" title="Presentation source code link">https://github.com/cesperanc/daws</a></li>
+    </ul>
+</article>
+        </section>
+        <div id="impress-toolbar" class="no-print"><a class="impress-tool lang-selector current-lang" hreflang="en" href="index.html" lang="en">English</a><a class="impress-tool lang-selector" hreflang="pt-PT" href="index_pt-PT.html" lang="pt-PT">Português</a></div>
+        <script type="text/javascript">
+        //<![CDATA[
+            var ImpressL10n = {
+                navigationTip:'Use a spacebar or arrow keys to navigate',
+                touchNavigationTip : 'Touch on the left or on the right to navigate',
+                manageVisualEffects : 'Enable/disable visual effects',
+                manageVisualEffectsHint : 'Please use this link to disable or enable the visual effects',
+                enableVisualEffects : 'Enable visual effects',
+                disableVisualEffects : 'Disable visual effects'
+            };
+        //]]>
+        </script>
+        <noscript class="no-print">
+            <div class="screen-reader-text">Unable to use JavaScript.</div>
+        </noscript>
+        <script src="assets/js/jumbo.js"></script>
+        <noscript class="no-print" lang="en">
+            <div>Unable to use JavaScript. <strong>The functionality will be greatly reduced.</strong></div>
+        </noscript>
+    </body>
+</html>
+<!-- 2013-2015, Cláudio Esperança <cesperanc@gmail.com> -->

@@ -4,23 +4,23 @@ module.exports = function (grunt) {
             nospawn: true
         },
         sass: {
-            files: ['**/*.sass'],
+            files: ['src/**/*.sass'],
             tasks: ['compass:from_watch']
         },
         scss: {
-            files: ['**/*.scss'],
+            files: ['src/**/*.scss'],
             tasks: ['compass:from_watch']
         },
         css: {
-            files: ['**/*.dev.css'],
+            files: ['src/**/*.dev.css'],
             tasks: ['cssmin:build']
         },
         js: {
-            files: ['**/*.dev.js'],
+            files: ['src/**/*.dev.js'],
             tasks: ['jshint:from_watch', 'uglify:from_watch', 'concat:from_watch_js']
         },
         html: {
-            files: ['html/**/*.html'],
+            files: ['src/html/**/*.html'],
             //tasks: ['concat:from_watch_html']
             tasks: ['lang']
         }

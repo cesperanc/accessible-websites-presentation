@@ -1,4 +1,4 @@
 {
-  "directory": "assets/vendor/",
+  "directory": "src/assets/vendor/",
   "analytics": true
 }
