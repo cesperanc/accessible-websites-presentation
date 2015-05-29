@@ -16,5 +16,5 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', ['watch']);
     //grunt.registerTask('build', ['concurrent:css', 'concurrent:js']);
-    grunt.registerTask('build', ['compass:build', 'autoprefixer:build', 'csso:build'/*, 'cssmin:build'*/, 'modernizr:build', 'jshint:build', 'uglify:build', /*'concat:build',*/ 'lang', 'copy:build']);
+    grunt.registerTask('build', ['compass:build', 'postcss:build', 'csso:build'/*, 'cssmin:build'*/, 'modernizr:build', 'jshint:build', 'uglify:build', /*'concat:build',*/ 'lang', 'copy:build']);
 };

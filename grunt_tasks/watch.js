@@ -5,24 +5,24 @@ module.exports = function (grunt) {
         },
         sass: {
             files: ['src/**/*.sass'],
-            tasks: ['compass:from_watch']
+            tasks: ['compass:from_watch', 'notify:watch']
         },
         scss: {
             files: ['src/**/*.scss'],
-            tasks: ['compass:from_watch']
+            tasks: ['compass:from_watch', 'notify:watch']
         },
         css: {
             files: ['src/**/*.dev.css'],
-            tasks: ['cssmin:build']
+            tasks: ['cssmin:build', 'notify:watch']
         },
         js: {
             files: ['src/**/*.dev.js'],
-            tasks: ['jshint:from_watch', 'uglify:from_watch', 'concat:from_watch_js']
+            tasks: ['jshint:from_watch', 'uglify:from_watch', 'concat:from_watch_js', 'notify:watch']
         },
         html: {
             files: ['src/html/**/*.html'],
             //tasks: ['concat:from_watch_html']
-            tasks: ['lang']
+            tasks: ['lang', 'notify:watch']
         }
     });
 

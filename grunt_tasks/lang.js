@@ -10,7 +10,6 @@ module.exports = function(grunt) {
         var concat = grunt.config.get('concat') || {};
         grunt.file.expand("./src/html/*").forEach(function (dir) {
             var dirName = dir.replace().substr(dir.lastIndexOf('/') + 1);
-            grunt.log.write(dirName);
             var files = {}, file = 'index' + (dirName === 'en' ? '' : '_' + dirName) + '.html';
             langs.push({lang: dirName, file: file});
             files["dist/"+file] = [dir + '/layout/header.html', dir + '/slides/*/*.html', dir + '/layout/footer.html'];
