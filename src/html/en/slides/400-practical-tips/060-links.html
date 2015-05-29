@@ -1,0 +1,31 @@
+<article id="links-without-content" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Links without content</span></h2>
+    <ul>
+        <li>Links <strong>should have content</strong> (it is not enough to define the destination address)
+            <code title="HTML code with inadequate text for the links" class="code prettyprint lang-html">&lt;a href="http://exemplo.com/"&gt;&lt;/a&gt;&lt;!-- Wrong!  --&gt;
+&lt;a href="http://example.com/"&gt;&lt;img src="image.png" alt=""&gt;&lt;/a&gt;&lt;!-- Wrong!  --&gt;</code></li>
+        <li>Text is important to give a context to the link<code title="HTML code for links with context" class="code prettyprint lang-html">&lt;a href="http://example.com/"&gt;Text&lt;/a&gt;&lt;!-- Better  --&gt;
+&lt;a href="http://example.com/"&gt;&lt;img src="image.png" alt="Text"&gt;&lt;/a&gt;&lt;!-- Better  --&gt;</code></li>
+    </ul>
+</article>
+
+
+<article id="links-text" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Text of links</span></h2>
+    <ul>
+        <li>The text of links <strong>should not be repeated</strong> in the same document (assuming text as the combination of the link content and the title attribute).</li>
+        <li>Generic texts which do not provide context information about the link, are not suitable: 
+            <code title="HTML code with a link described by a generic text" class="code prettyprint lang-html">&lt;a href="http://example.com/document-xpto.pdf"&gt;Click here&lt;/a&gt; to download the XPTO document.&lt;!-- Wrong!  --&gt;</code></li>
+        <li>Expressions like "click here" are discouraged (there are users who do not "click").</li>
+    </ul>
+</article>
+
+
+<article id="example-link" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternative to the previous example</span></h2>
+    <code title="HTML code with a link fully described" class="code prettyprint lang-html">&lt;a target="_blank" title="Follow the link to access the XPTO document in a new tab" href="http://example.com/document-xpto.pdf"&gt;Download the XPTO document (&lt;abbr lang="en" title="Portable Document Format"&gt;PDF&lt;/abbr&gt;)&lt;/a&gt;.</code>
+    <ul>
+        <li>If applicable, it is recommended to inform the user that the target of the link will open in a new window/tab.</li>
+        <li>It is also advisable to indicate the type of document associated with the link (if it is not a <abbr lang="en" title="HyperText Markup Language">HTML</abbr> page).</li>
+    </ul>
+</article>

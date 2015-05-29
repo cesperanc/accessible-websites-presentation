@@ -1,0 +1,99 @@
+<article id="tables" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Tables</span></h2>
+    <ul>
+        <li>Tables are used to present information in a tabular form and <strong>should not be used to define site layouts</strong>!!!
+            <a href="http://e5.onthehub.com/WebStore/ProductsByMajorVersionList.aspx?ws=56ce2fc4-629b-e011-969d-0030487d8897&amp;vsro=8&amp;JSEnabled=1" target="_blank" title="Follow the link to view an example of site with a layout built with tables - something you shouldn't do">
+                <img alt="Microsoft DreamSpark website" src="assets/images/sh2.png"/>
+            </a>
+        </li>
+    </ul>
+</article>
+
+
+<article id="tables-rules" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Formal structure of tables</span></h2>
+    <ul>
+        <li>You should set <strong>a caption <span class="line-through">and a summary</span><sup class="footnote-reference"><a title="View the footnote" href="#table-summary">2</a></sup></strong> for the table.</li>
+        <li>Usually the <strong>caption</strong> is presented to the user and functions like a <strong>legend for the table</strong>.</li>
+    </ul>
+    <code title="HTML code with and example for a table with a caption" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Table 1: Student evaluations by course&lt;/caption&gt; (...) 
+&lt;/table&gt;</code>
+    <div id="table-summary" class="footnote"><sup class="footnote-reference">2</sup> The usage of the <code>summary</code> attribute is now deprecated in <abbr lang="en" title="HyperText Markup Language">HTML</abbr> 5; the table description should now be done by using the <code>caption</code> or using a <em lang="en">tag</em> <code>figure</code> which wraps and describes the table.</div>
+</article>
+
+
+<article id="tables-rules-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Formal structure of tables (2)</span></h2>
+    <ul>
+        <li>It is recommended to define a <strong>header</strong> and <strong>content</strong> sections to provide information about the table structure.</li>
+        <li>Optionally you can also define a <strong>footer</strong> section which, along with the header, can be repeated on page breaks (e.g., when printing).</li>
+    </ul>
+    <code title="HTML code with a formal structure of a table" class="code prettyprint lang-html" style="font-size: 0.7em">&lt;table&gt;
+    &lt;caption&gt;Table 1: Student evaluations by course&lt;/caption&gt;
+    &lt;thead&gt;&lt;!-- Header cells (...) --&gt;&lt;/thead&gt;
+    &lt;tfoot&gt;&lt;!-- Footer cells (optional) (...) --&gt;&lt;/tfoot&gt;
+    &lt;tbody&gt;&lt;!-- Content cells (...) --&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-code-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Sample code of a table</span></h2>
+    <code title="HTML code with a complete example of a table" class="code prettyprint lang-html" style="font-size: 0.5em">&lt;table&gt;
+    &lt;caption&gt;Table 1: Student evaluations by course (from 0 to 20)&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;&lt;span title="Student ID"&gt;Student&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="Course: Service Quality over a Network"&gt;SQN&lt;/span&gt;&lt;/th&gt;
+            &lt;th scope="col"&gt;&lt;span title="Course: Computation in Distributed Environments"&gt;CDE&lt;/span&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120915&lt;/th&gt;
+            &lt;td&gt;19&lt;/td&gt;
+            &lt;td&gt;17&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2120917&lt;/th&gt;
+            &lt;td&gt;18&lt;/td&gt;
+            &lt;td&gt;18&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+</article>
+
+
+<article id="example-table" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Result of the previous example</span></h2>
+    <table>
+        <caption>Table 1: Student evaluations by course (from 0 to 20)</caption>
+        <thead>
+            <tr>
+                <th scope="col"><span title="Student ID">Student</span></th>
+                <th scope="col"><span title="Course: Service Quality over a Network">SQN</span></th>
+                <th scope="col"><span title="Course: Computation in Distributed Environments">CDE</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">2120915</th>
+                <td>19</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <th scope="row">2120917</th>
+                <td>18</td>
+                <td>18</td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+
+
+<article id="tables-more-information" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">More about tables</span></h2>
+    <p>Understand a complex table only by hearing can be something quite difficult, so the recommendation is to <strong>simplify tables wherever possible</strong>.</p>
+    <p>There are some more <abbr lang="en" title="HyperText Markup Language">HTML</abbr> instructions for building more complex tables that were not addressed in this presentation. If necessary these additional options should be explored to facilitate the interpretation of data in tables.</p>
+</article>

@@ -1,0 +1,36 @@
+<article id="alternative-navigation-modes" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternative navigation methods</span></h2>
+    <ul>
+        <li>Not all users use to the mouse to navigate on the <em lang="en">web</em>.</li>
+        <li><strong>Implementation of support for alternative navigation methods</strong> like navigation with keyboard, touch devices, etc., is important to ensure that these users are not overlooked.</li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternative navigation methods (2)</span></h2>
+    <ul>
+        <li>The execution of actions only on <code>:hover</code> is one of the most common mistakes<code title="CSS code with styling only on hover event" class="code prettyprint lang-css">a:hover{
+    text-decoration: underline;
+}</code></li>
+        <li>Solution: apply the same effect also on <code>:focus</code><code title="CSS code with styling of an element on hover, focus and active states" class="code prettyprint lang-css">
+a:hover,
+a:focus,
+a:active{
+    text-decoration: underline;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="alternative-navigation-modes-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Alternative navigation methods (3)</span></h2>
+    <ul>
+        <li>Usage of <em lang="en">JavaScript</em> code can be useful to customize the behavior to the characteristics of the client app.</li>
+        <li>For instance, you can modify de behavior if a touch device is detected: <code title="Touch feature detection with JavaScript code" class="code prettyprint lang-js">if("ontouchstart" in window){
+/* Touch device; define the custom code to do something like expanding a menu when an element is touched */
+}else{
+/* No tactile interface; define the code to expand the menu on focus or when the mouse is hover an element */
+}</code></li>
+    </ul>
+</article>

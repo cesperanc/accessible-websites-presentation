@@ -1,0 +1,72 @@
+<article id="skip-links" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Skip links</span></h2>
+    <ul>
+        <li>Not all users use a mouse or a touch device to navigate in a <em lang="en">site</em>.</li>
+        <li>Skipping links provide a mechanism for a user to have <strong>easy access to content or skip large blocks of information</strong>.</li>
+        <li>It is particularly useful for users who browse with a keyboard (for instance, by using the <kbd>Tab</kbd> key) or with other devices to focus elements, step by step.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Skip links (2)</span></h2>
+    <ul>
+        <li>The skip links are regular links whose destination are anchors for existing identifiers on page they are in.
+            <code title="HTML code with an example of a skip link" class="code prettyprint lang-html">&lt;a href="#content" title="Follow the link to jump to the content of the page" class="skip-link"&gt;Go to the content&lt;/a&gt;
+&lt;!-- HTML to banners, menus, etc --&gt;
+&lt;div id="content"&gt;&lt;!-- Content... --&gt;&lt;/div&gt;</code></li>
+        <li><a href="http://www.acessibilidade.gov.pt/w3/TR/WCAG20-TECHS/G1.html" target="_blank" title="Follow the link to view the reference page">The first link in the page should be a skip link to access directly to the main content.</a></li>
+        <li>Links to skip blocks with many links are also recommended.</li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Skip links visibility</span></h2>
+    <ul>
+        <li>Skip links should not be hidden when they are active<code title="CSS code not advisable to skip links" class="code prettyprint lang-css">.skip-link{
+    text-indent: -9999px; /* Wrong */
+}
+.skip-link{
+    display: none; /* Very wrong!!! */
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-2" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Skip links visibility (2)</span></h2>
+    <ul>
+        <li>Skip links can be hidden from the visible area <strong>only</strong> when they are not active<code title="CSS code to hide skip links" class="code prettyprint lang-css">a.skip-link,
+a.skip-link:hover,
+a.skip-link:visited{
+    position:absolute;
+    left:0px;
+    top:-1000px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}</code></li>
+    </ul>
+</article>
+
+
+<article id="skip-links-visibility-3" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label">Skip links visibility (3)</span></h2>
+    <ul>
+        <li>However these must be displayed when they are in focus (for instance, when browsing with a keyboard)<code title="CSS code to show skip links when focused" class="code prettyprint lang-css">a.skip-link:active,
+a.skip-link:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}</code></li>
+    </ul>
+</article>
+
+<article id="aria-landmarks" class="step slide" data-x="+1000" data-y="0" data-z="0" data-rotate-y="2">
+    <h2 class="title"><span class="label" lang="en"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> landmark roles</span></h2>
+    <ul>
+        <li>The skip links are still widely used (promoted by <a href="http://www.w3.org/TR/WCAG20/" target="_blank"><abbr lang="en" title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0</a>)</li>
+        <li>However <a href="http://www.w3.org/WAI/PF/aria-practices/#kbd_layout" target="_blank" lang="en"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> landmark roles</a> may provide a more attractive solution to <strong>logically describe the structure of a site or web application </strong> and <strong>allow navigation between its sections</strong> with the use of assistive technologies.</li>
+    </ul>
+</article>
